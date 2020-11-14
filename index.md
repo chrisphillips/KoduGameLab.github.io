@@ -24,7 +24,7 @@ The heart of Kodu is the tile-based programming language. The language is high l
 
 Having the tiles represent real-world events, actions, and objects helps bridge the gap between a new user's real-world experience and the often abstract nature of computer programming.
 
-## [Download Kodu](https://scoy.github.io/KoduGameLab/downloads/)
+## [Download Kodu](downloads)
 
 ## [Classroom Resources](resources)
 ## [Videos](resources#videos)

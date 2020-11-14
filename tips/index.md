@@ -14,11 +14,11 @@ hero_link_text: Get Kodu
     </div>
     
     <div class="column is-4-desktop is-6-tablet">
-        <a href="https://scoy.github.io/KoduGameLab/tips/print_kode">
+        <a href="print_kode">
         <div class="card">
             <div class="card-image">
                 <figure class="image ">
-                    <img src="https://scoy.github.io/KoduGameLab/tips/print_kode_small.png" alt="Print Kode">
+                    <img src="print_kode_small.png" alt="Print Kode">
                 </figure>
             </div>
             <div class="card-content">
@@ -33,11 +33,11 @@ hero_link_text: Get Kodu
     </div>
     
     <div class="column is-4-desktop is-6-tablet">
-        <a href="https://scoy.github.io/KoduGameLab/tips/coordinates">
+        <a href="coordinates">
         <div class="card">
             <div class="card-image">
                 <figure class="image ">
-                    <img src="https://scoy.github.io/KoduGameLab/tips/snap_small.png" alt="Coordinates and Snap-to-Grid">
+                    <img src="snap_small.png" alt="Coordinates and Snap-to-Grid">
                 </figure>
             </div>
             <div class="card-content">
@@ -52,11 +52,11 @@ hero_link_text: Get Kodu
     </div>
 
     <div class="column is-4-desktop is-6-tablet">
-        <a href="https://scoy.github.io/KoduGameLab/tips/center">
+        <a href="center">
         <div class="card">
             <div class="card-image">
                 <figure class="image ">
-                    <img src="https://scoy.github.io/KoduGameLab/tips/recenter_small.png" alt="Re-Center Camera">
+                    <img src="recenter_small.png" alt="Re-Center Camera">
                 </figure>
             </div>
             <div class="card-content">
@@ -71,11 +71,11 @@ hero_link_text: Get Kodu
     </div>
 
     <div class="column is-4-desktop is-6-tablet">
-        <a href="https://scoy.github.io/KoduGameLab/tips/screenshot">
+        <a href="screenshot">
         <div class="card">
             <div class="card-image">
                 <figure class="image ">
-                    <img src="https://scoy.github.io/KoduGameLab/tips/screenshot_small.jpg" alt="Screenshots">
+                    <img src="screenshot_small.jpg" alt="Screenshots">
                 </figure>
             </div>
             <div class="card-content">
@@ -90,11 +90,11 @@ hero_link_text: Get Kodu
     </div>
 
     <div class="column is-4-desktop is-6-tablet">
-        <a href="https://scoy.github.io/KoduGameLab/tips/language">
+        <a href="language">
         <div class="card">
             <div class="card-image">
                 <figure class="image ">
-                    <img src="https://scoy.github.io/KoduGameLab/tips/language_small.png" alt="Language">
+                    <img src="language_small.png" alt="Language">
                 </figure>
             </div>
             <div class="card-content">
@@ -109,11 +109,11 @@ hero_link_text: Get Kodu
     </div>
 
     <div class="column is-4-desktop is-6-tablet">
-        <a href="https://scoy.github.io/KoduGameLab/tips/score_visibility">
+        <a href="score_visibility">
         <div class="card">
             <div class="card-image">
                 <figure class="image ">
-                    <img src="https://scoy.github.io/KoduGameLab/tips/score_visibility_small.jpg" alt="Score Visibility">
+                    <img src="score_visibility_small.jpg" alt="Score Visibility">
                 </figure>
             </div>
             <div class="card-content">
@@ -128,11 +128,11 @@ hero_link_text: Get Kodu
     </div>
 
     <div class="column is-4-desktop is-6-tablet">
-        <a href="https://scoy.github.io/KoduGameLab/tips/glyphs">
+        <a href="glyphs">
         <div class="card">
             <div class="card-image">
                 <figure class="image ">
-                    <img src="https://scoy.github.io/KoduGameLab/tips/glyphs_small.png" alt="Secrect Glyphs">
+                    <img src="glyphs_small.png" alt="Secrect Glyphs">
                 </figure>
             </div>
             <div class="card-content">
@@ -147,11 +147,11 @@ hero_link_text: Get Kodu
     </div>
 
     <div class="column is-4-desktop is-6-tablet">
-        <a href="https://scoy.github.io/KoduGameLab/tips/sky">
+        <a href="sky">
         <div class="card">
             <div class="card-image">
                 <figure class="image ">
-                    <img src="https://scoy.github.io/KoduGameLab/tips/sky_small.png" alt="Sky">
+                    <img src="sky_small.png" alt="Sky">
                 </figure>
             </div>
             <div class="card-content">
@@ -166,11 +166,11 @@ hero_link_text: Get Kodu
     </div>
 
     <div class="column is-4-desktop is-6-tablet">
-        <a href="https://scoy.github.io/KoduGameLab/tips/lighting">
+        <a href="lighting">
         <div class="card">
             <div class="card-image">
                 <figure class="image ">
-                    <img src="https://scoy.github.io/KoduGameLab/tips/lighting_small.png" alt="Lighting">
+                    <img src="lighting_small.png" alt="Lighting">
                 </figure>
             </div>
             <div class="card-content">
@@ -185,11 +185,11 @@ hero_link_text: Get Kodu
     </div>
 
     <div class="column is-4-desktop is-6-tablet">
-        <a href="https://scoy.github.io/KoduGameLab/tips/gui_buttons">
+        <a href="gui_buttons">
         <div class="card">
             <div class="card-image">
                 <figure class="image ">
-                    <img src="https://scoy.github.io/KoduGameLab/tips/gui_buttons_small.png" alt="GUI Buttons">
+                    <img src="gui_buttons_small.png" alt="GUI Buttons">
                 </figure>
             </div>
             <div class="card-content">
@@ -204,11 +204,11 @@ hero_link_text: Get Kodu
     </div>
 
     <div class="column is-4-desktop is-6-tablet">
-        <a href="https://scoy.github.io/KoduGameLab/tips/export_world">
+        <a href="export_world">
         <div class="card">
             <div class="card-image">
                 <figure class="image ">
-                    <img src="https://scoy.github.io/KoduGameLab/tips/export_world_small.png" alt="Export World">
+                    <img src="export_world_small.png" alt="Export World">
                 </figure>
             </div>
             <div class="card-content">
@@ -223,11 +223,11 @@ hero_link_text: Get Kodu
     </div>
 
     <div class="column is-4-desktop is-6-tablet">
-        <a href="https://scoy.github.io/KoduGameLab/tips/creatables">
+        <a href="creatables">
         <div class="card">
             <div class="card-image">
                 <figure class="image ">
-                    <img src="https://scoy.github.io/KoduGameLab/tips/creatables_small.png" alt="Creatables">
+                    <img src="creatables_small.png" alt="Creatables">
                 </figure>
             </div>
             <div class="card-content">
@@ -242,11 +242,11 @@ hero_link_text: Get Kodu
     </div>
 
     <div class="column is-4-desktop is-6-tablet">
-        <a href="https://scoy.github.io/KoduGameLab/tips/start">
+        <a href="start">
         <div class="card">
             <div class="card-image">
                 <figure class="image ">
-                    <img src="https://scoy.github.io/KoduGameLab/tips/start_small.png" alt="Start Game With">
+                    <img src="start_small.png" alt="Start Game With">
                 </figure>
             </div>
             <div class="card-content">
