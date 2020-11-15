@@ -1,7 +1,7 @@
 ---
 title: New Kodu Release (1.5.47.0)
 subtitle: Critical fix for micro:bit users
-image: https://scoy.github.io/KoduGameLab/images/microbit.png
+image: ../images/microbit.png
 layout: post
 published: true
 show_sidebar: true
@@ -16,7 +16,7 @@ I normally wouldn’t put out a release so quickly after the last one, but we’
 
 * First is the % sign.  You can now use this when doing math with scores.<br><br>WHEN DO SetScore Red Green % 20Points 3Points   <-- this will set Red to 23% of Green (or Green% of 23, same thing)<br><br>Since scores are integers, all results are rounded off.
 
-![Fred](https://scoy.github.io/KoduGameLab/images/Fred.jpg)
+![Fred](../images/Fred.jpg)
 * Second is the ability to rename characters.  You can now change a character’s name to make it easier to keep track of.<br><br>The rename option is found in the character settings (DNA) menu.  Also, if you right click or tap on a character, the Rename option will appear in the menu.<br><br>Multiple characters can have the same name.
 
 * There are also new filter options derived from the named characters.  You can name a character “Fred” and then program another character with WHEN See Fred DO …
