@@ -8,7 +8,7 @@ hero_height: is-small
 
 [Home](..)/[Resources](.)/Surface Area and Volume
 
-[![](https://www.kodugamelab.com/API/Thumbnail?world=Bf6jissB40ugXzj7hb3H1w==)](https://worlds.kodugamelab.com/world/Bf6jissB40ugXzj7hb3H1w==)
+[![](surface_area_and_volume.png)](https://worlds.kodugamelab.com/world/Bf6jissB40ugXzj7hb3H1w==)
 
 ## Surface Area and Volume
 ![Digital Technology](dt.png) ![Computer Science](cs.png) ![Math](m.png)

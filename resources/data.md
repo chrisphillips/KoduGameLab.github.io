@@ -7,7 +7,7 @@ hero_height: is-small
 
 [Home](..)/[Resources](.)/Data
 
-[![](https://www.kodugamelab.com/API/Thumbnail?world=fijyJwpOfU24ijooYta7yA==)](https://worlds.kodugamelab.com/world/fijyJwpOfU24ijooYta7yA==)
+[![](data.png)](https://worlds.kodugamelab.com/world/fijyJwpOfU24ijooYta7yA==)
 
 ## Data
 ![Digital Technology](dt.png) ![Computer Science](cs.png) ![Math](m.png)

@@ -7,7 +7,7 @@ hero_height: is-small
 
 [Home](..)/[Resources](.)/Presentation of Game Development
 
-[![](https://www.kodugamelab.com/API/Thumbnail?world=muI7VuU7eEiM4Qw4NGcqsw==)](https://worlds.kodugamelab.com/world/muI7VuU7eEiM4Qw4NGcqsw==)
+[![](presentation_of_game_development.png)](https://worlds.kodugamelab.com/world/muI7VuU7eEiM4Qw4NGcqsw==)
 
 ## Presentation of Game Development
 ![Digital Technology](dt.png) ![Computer Science](cs.png)

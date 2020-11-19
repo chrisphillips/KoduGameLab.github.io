@@ -7,7 +7,7 @@ hero_height: is-small
 
 [Home](..)/[Resources](.)/Search and Explore Mars
 
-[![](https://www.kodugamelab.com/API/Thumbnail?world=8RCJFS4ILEipqDdRvG9EQQ==)](https://worlds.kodugamelab.com/world/8RCJFS4ILEipqDdRvG9EQQ==)
+[![](search_and_explore_mars.png)](https://worlds.kodugamelab.com/world/8RCJFS4ILEipqDdRvG9EQQ==)
 
 ## Search and Explore Mars
 ![Digital Technology](dt.png) ![Computer Science](cs.png) ![Science](s.png)

@@ -7,7 +7,7 @@ hero_height: is-small
 
 [Home](..)/[Resources](.)/Kodu Curriculum Getting Started with Xbox Controller
 
-[![](https://www.kodugamelab.com/API/Thumbnail?world=unirU5NOr0-dpWPpFyAt1g==)](https://worlds.kodugamelab.com/world/unirU5NOr0-dpWPpFyAt1g==)
+[![](getting_started_with_xbox_controller.png)](https://worlds.kodugamelab.com/world/unirU5NOr0-dpWPpFyAt1g==)
 
 ## Kodu Curriculum Getting Started with Xbox Controller
 ![Digital Technology](dt.png) ![Computer Science](cs.png)

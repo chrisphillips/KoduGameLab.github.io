@@ -7,7 +7,7 @@ hero_height: is-small
 
 [Home](..)/[Resources](.)/Kodu Says "Yuck!"
 
-[![](https://www.kodugamelab.com/API/Thumbnail?world=dxFmr9cZLkGWeFv2y_1mrw==)](https://worlds.kodugamelab.com/world/dxFmr9cZLkGWeFv2y_1mrw==)
+[![](kodu_says_yuck.png)](https://worlds.kodugamelab.com/world/dxFmr9cZLkGWeFv2y_1mrw==)
 
 ## Kodu Says "Yuck!"
 ![Digital Technology](dt.png) ![Computer Science](cs.png)

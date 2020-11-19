@@ -7,7 +7,7 @@ hero_height: is-small
 
 [Home](..)/[Resources](.)/Managed Test Drive
 
-[![](https://www.kodugamelab.com/API/Thumbnail?world=sQSa7QMWL06j_Z0r8xuKOA==)](https://worlds.kodugamelab.com/world/sQSa7QMWL06j_Z0r8xuKOA==)
+[![](managed_test_drive.png)](https://worlds.kodugamelab.com/world/sQSa7QMWL06j_Z0r8xuKOA==)
 
 ## Managed Test Drive
 ![Digital Technology](dt.png) ![Computer Science](cs.png)

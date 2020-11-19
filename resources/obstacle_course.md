@@ -8,7 +8,7 @@ hero_height: is-small
 
 [Home](..)/[Resources](.)/Obstacle Course
 
-[![](https://www.kodugamelab.com/API/Thumbnail?world=SKbVVDUvB0CgzPT9xyjt7g==)](https://worlds.kodugamelab.com/world/SKbVVDUvB0CgzPT9xyjt7g==)
+[![](obstacle_course.png)](https://worlds.kodugamelab.com/world/SKbVVDUvB0CgzPT9xyjt7g==)
 
 ## Obstacle Course
 ![Digital Technology](dt.png) ![Computer Science](cs.png) ![Math](m.png)

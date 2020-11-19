@@ -7,7 +7,7 @@ hero_height: is-small
 
 [Home](..)/[Resources](.)/Getting Started with Kodu
 
-[![](https://www.kodugamelab.com/API/Thumbnail?world=LUmhhCCDhEq6hIqgCGMe1Q==)](https://worlds.kodugamelab.com/world/LUmhhCCDhEq6hIqgCGMe1Q==)
+[![](getting_started_with_kodu.png)](https://worlds.kodugamelab.com/world/LUmhhCCDhEq6hIqgCGMe1Q==)
 
 ## Getting Started with Kodu
 ![Digital Technology](dt.png) ![Computer Science](cs.png)

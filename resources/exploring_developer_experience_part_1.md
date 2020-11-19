@@ -6,7 +6,7 @@ hero_height: is-small
 
 [Home](..)/[Resources](.)/Exploring Developer Experience, part 1
 
-[![](https://www.kodugamelab.com/API/Thumbnail?world=J5PzbvQXhkSU1H33_zZ8JA==)](https://worlds.kodugamelab.com/world/J5PzbvQXhkSU1H33_zZ8JA==)
+[![](exploring_developer_experience_part_1.png)](https://worlds.kodugamelab.com/world/J5PzbvQXhkSU1H33_zZ8JA==)
 
 ## Exploring Developer Experience, part 1
 ![Digital Technology](dt.png) ![Computer Science](cs.png)

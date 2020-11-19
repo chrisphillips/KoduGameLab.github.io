@@ -7,7 +7,7 @@ hero_height: is-small
 
 [Home](..)/[Resources](.)/Color Filters
 
-[![](https://www.kodugamelab.com/API/Thumbnail?world=XFnWuvNzkEO3-xiEyOzzhA==)](https://worlds.kodugamelab.com/world/XFnWuvNzkEO3-xiEyOzzhA==)
+[![](color_filters.png)](https://worlds.kodugamelab.com/world/XFnWuvNzkEO3-xiEyOzzhA==)
 
 ## Color filters with Pursue and Consume 
 ![Digital Technology](dt.png) ![Computer Science](cs.png)

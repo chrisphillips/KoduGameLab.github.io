@@ -7,7 +7,7 @@ hero_height: is-small
 
 [Home](..)/[Resources](.)/Exploring Kodu Characters
 
-[![](https://www.kodugamelab.com/API/Thumbnail?world=RysBpPUArUOXRWgV_F5P7A==)](https://worlds.kodugamelab.com/world/RysBpPUArUOXRWgV_F5P7A==)
+[![](exploring_kodu_characters.png)](https://worlds.kodugamelab.com/world/RysBpPUArUOXRWgV_F5P7A==)
 
 ## Exploring Kodu Characters
 ![Digital Technology](dt.png) ![Computer Science](cs.png)

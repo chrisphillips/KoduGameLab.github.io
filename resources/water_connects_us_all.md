@@ -7,7 +7,7 @@ hero_height: is-small
 
 [Home](..)/[Resources](.)/Water Connects Us All
 
-[![](https://www.kodugamelab.com/API/Thumbnail?world=fbdyJ64suEmzMmNMo8cg2g==)](https://worlds.kodugamelab.com/world/fbdyJ64suEmzMmNMo8cg2g==)
+[![](water_connects_us_all.png)](https://worlds.kodugamelab.com/world/fbdyJ64suEmzMmNMo8cg2g==)
 
 ## Water Connects Us All
 ![Digital Technology](dt.png) ![Computer Science](cs.png) ![Science](s.png)

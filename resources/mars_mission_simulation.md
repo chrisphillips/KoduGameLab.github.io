@@ -7,7 +7,7 @@ hero_height: is-small
 
 [Home](..)/[Resources](.)/Mars Mission Simulation
 
-[![](https://www.kodugamelab.com/API/Thumbnail?world=3kPS2pzdJkGvRKN9I6EZLA==)](https://worlds.kodugamelab.com/world/3kPS2pzdJkGvRKN9I6EZLA==)
+[![](mars_mission_simulation.png)](https://worlds.kodugamelab.com/world/3kPS2pzdJkGvRKN9I6EZLA==)
 
 ## Mars Mission Simulation
 ![Digital Technology](dt.png) ![Computer Science](cs.png) ![Science](s.png)

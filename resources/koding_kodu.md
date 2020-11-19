@@ -7,7 +7,7 @@ hero_height: is-small
 
 [Home](..)/[Resources](.)/Koding Kodu
 
-[![](https://www.kodugamelab.com/API/Thumbnail?world=LXLAcgg_TE2FtIBT9JP_vA==)](https://worlds.kodugamelab.com/world/LXLAcgg_TE2FtIBT9JP_vA==)
+[![](koding_kodu.png)](https://worlds.kodugamelab.com/world/LXLAcgg_TE2FtIBT9JP_vA==)
 
 ## Koding Kodu
 ![Digital Technology](dt.png) ![Computer Science](cs.png)

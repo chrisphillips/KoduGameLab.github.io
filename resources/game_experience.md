@@ -7,7 +7,7 @@ hero_height: is-small
 
 [Home](..)/[Resources](.)/Game Experience
 
-[![](https://www.kodugamelab.com/API/Thumbnail?world=G2HFlfPcpkqCL0zF0DzoIQ==)](https://worlds.kodugamelab.com/world/G2HFlfPcpkqCL0zF0DzoIQ==)
+[![](game_experience.png)](https://worlds.kodugamelab.com/world/G2HFlfPcpkqCL0zF0DzoIQ==)
 
 ## Game Experience
 ![Digital Technology](dt.png) ![Computer Science](cs.png)

@@ -7,7 +7,7 @@ hero_height: is-small
 
 [Home](..)/[Resources](.)/Placing and Customizing Objects
 
-[![](https://www.kodugamelab.com/API/Thumbnail?world=ofYhiqIvt0acxxigAuULHQ==)](https://worlds.kodugamelab.com/world/ofYhiqIvt0acxxigAuULHQ==)
+[![](placing_customizing_objects.png)](https://worlds.kodugamelab.com/world/ofYhiqIvt0acxxigAuULHQ==)
 
 ## Placing and Customizing Objects
 ![Digital Technology](dt.png) ![Computer Science](cs.png)
