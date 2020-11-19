@@ -10,7 +10,7 @@ hide_hero: true
 
 [Home](../..)/[Resources](..)/Twinkle
 
-[![](https://www.kodugamelab.com/API/Thumbnail?world=CtE_WSUVGE-6m0U_wAu0Uw==)](https://worlds.kodugamelab.com/world/CtE_WSUVGE-6m0U_wAu0Uw==)
+[![](twinkle.png)](https://worlds.kodugamelab.com/world/CtE_WSUVGE-6m0U_wAu0Uw==)
 
 ![Digital Technology](../dt.png) ![Computer Science](../cs.png) ![robotics](../r.png)
 

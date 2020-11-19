@@ -10,7 +10,7 @@ hide_hero: true
 
 [Home](../..)/[Resources](..)/Air Hockey
 
-[![](https://www.kodugamelab.com/API/Thumbnail?world=RgSNHPh2fkas6nTQ0WN-Aw==)](https://worlds.kodugamelab.com/world/RgSNHPh2fkas6nTQ0WN-Aw==)
+[![](air_hockey.png)](https://worlds.kodugamelab.com/world/RgSNHPh2fkas6nTQ0WN-Aw==)
 
 ![Digital Technology](../dt.png) ![Computer Science](../cs.png) ![robotics](../r.png)
 

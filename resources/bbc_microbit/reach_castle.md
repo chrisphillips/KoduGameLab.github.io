@@ -10,7 +10,7 @@ hide_hero: true
 
 [Home](../..)/[Resources](..)/Reach Castle
 
-[![](https://www.kodugamelab.com/API/Thumbnail?world=pt-8eWj_fUiwVhE7ZEDk1w==)](https://worlds.kodugamelab.com/world/pt-8eWj_fUiwVhE7ZEDk1w==)
+[![](reach_castle.png)](https://worlds.kodugamelab.com/world/pt-8eWj_fUiwVhE7ZEDk1w==)
 
 ![Digital Technology](../dt.png) ![Computer Science](../cs.png) ![robotics](../r.png)
 

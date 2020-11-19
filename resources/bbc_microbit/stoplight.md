@@ -10,7 +10,7 @@ hide_hero: true
 
 [Home](../..)/[Resources](..)/Stoplight
 
-[![](https://www.kodugamelab.com/API/Thumbnail?world=6JLpFERH20i-DQV897XDLQ==)](https://worlds.kodugamelab.com/world/6JLpFERH20i-DQV897XDLQ==)
+[![](stoplight.png)](https://worlds.kodugamelab.com/world/6JLpFERH20i-DQV897XDLQ==)
 
 ![Digital Technology](../dt.png) ![Computer Science](../cs.png) ![robotics](../r.png)
 

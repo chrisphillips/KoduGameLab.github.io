@@ -10,7 +10,7 @@ hide_hero: true
 
 [Home](../..)/[Resources](..)/Underwater Explorer
 
-[![](https://www.kodugamelab.com/API/Thumbnail?world=y3WUJyKvXEWPz8zDsWWayA==)](https://worlds.kodugamelab.com/world/y3WUJyKvXEWPz8zDsWWayA==)
+[![](underwater_explorer.png)](https://worlds.kodugamelab.com/world/y3WUJyKvXEWPz8zDsWWayA==)
 
 ![Digital Technology](../dt.png) ![Computer Science](../cs.png) ![robotics](../r.png)
 
