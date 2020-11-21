@@ -69,4 +69,5 @@ The Kodu website uses no "cookies" or any other tracking mechanisms.
 For questions or any support issues, email <KoduSupport@InfiniteInstant.com>.
 
 [Back to KoduGameLab](../index)
+
 ![Kodu Game Lab](../images/footer.png)
