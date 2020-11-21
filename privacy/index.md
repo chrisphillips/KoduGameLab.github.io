@@ -5,7 +5,7 @@ show_sidebar: false
 hero_height: is-small
 ---
 
-[Back to KoduGameLab](index)
+[Back to KoduGameLab](../index)
 
 ## Kodu Game Lab Privacy Statement
 
@@ -68,5 +68,5 @@ The Kodu website uses no "cookies" or any other tracking mechanisms.
 ## Questions?
 For questions or any support issues, email <KoduSupport@InfiniteInstant.com>.
 
-[Back to KoduGameLab](index)
+[Back to KoduGameLab](../index)
 ![Kodu Game Lab](../images/footer.png)
