@@ -1,5 +1,6 @@
 ---
-title: Kodu Game Lab Privacy Statement
+title: Kodu Game Lab
+subtitle: Privacy Statement
 layout: page
 show_sidebar: false
 hero_height: is-small
