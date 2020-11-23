@@ -22,7 +22,7 @@ show_sidebar: false
                                 <img src="https://via.placeholder.com/128x128" alt="World Name">
                               </figure>
                             </div>
-                            <div class="card-content">
+                            <div class="card-content p-3">
                               <p class="title is-6">World Name
                               </p><p class="subtitle is-6">by Author Name</p>  
                               <p class="title is-7 has-text-right">X days Ago</p>
