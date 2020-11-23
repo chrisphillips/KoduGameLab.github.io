@@ -7,7 +7,7 @@ hero_height: is-small
 
 [Home](..)/[Resources](.)/Rapid Prototyping
 
-[![](https://www.kodugamelab.com/API/Thumbnail?world=JB_AMqu4Pk2_mQEICpgZvQ==)](https://worlds.kodugamelab.com/world/JB_AMqu4Pk2_mQEICpgZvQ==)
+[![](rapid_prototyping.png)](https://worlds.kodugamelab.com/world/JB_AMqu4Pk2_mQEICpgZvQ==)
 
 ## Rapid Prototyping
 ![Digital Technology](dt.png) ![Computer Science](cs.png)

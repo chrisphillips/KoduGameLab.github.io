@@ -6,7 +6,7 @@ hero_height: is-small
 
 [Home](..)/[Resources](.)/Open Ended Developer Experience, part 2
 
-[![](https://www.kodugamelab.com/API/Thumbnail?world=J5PzbvQXhkSU1H33_zZ8JA==)](https://worlds.kodugamelab.com/world/J5PzbvQXhkSU1H33_zZ8JA==)
+[![](open_ended_developer_experience_part_2.png)](https://worlds.kodugamelab.com/world/J5PzbvQXhkSU1H33_zZ8JA==)
 
 ## Open Ended Developer Experience, part 2
 ![Digital Technology](dt.png) ![Computer Science](cs.png)

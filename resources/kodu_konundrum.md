@@ -7,7 +7,7 @@ hero_height: is-small
 
 [Home](..)/[Resources](.)/Kodu Konundrum
 
-[![](https://www.kodugamelab.com/API/Thumbnail?world=dxFmr9cZLkGWeFv2y_1mrw==)](https://worlds.kodugamelab.com/world/dxFmr9cZLkGWeFv2y_1mrw==)
+[![](kodu_konundrum.png)](https://worlds.kodugamelab.com/world/dxFmr9cZLkGWeFv2y_1mrw==)
 
 ## Kodu Konundrum
 ![Digital Technology](dt.png) ![Computer Science](cs.png)

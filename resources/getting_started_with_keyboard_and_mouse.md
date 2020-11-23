@@ -7,7 +7,7 @@ hero_height: is-small
 
 [Home](..)/[Resources](.)/Kodu Curriculum Getting Started with Keyboard and Mouse
 
-[![](https://www.kodugamelab.com/API/Thumbnail?world=T4X1-9ojQEujLDuxvnQMDQ==)](https://worlds.kodugamelab.com/world/T4X1-9ojQEujLDuxvnQMDQ==)
+[![](getting_started_with_keyboard_and_mouse.png)](https://worlds.kodugamelab.com/world/T4X1-9ojQEujLDuxvnQMDQ==)
 
 ## Kodu Curriculum Getting Started with Keyboard and Mouse
 ![Digital Technology](dt.png) ![Computer Science](cs.png)

@@ -7,7 +7,7 @@ hero_height: is-small
 
 [Home](..)/[Resources](.)/Kodu Curriculum with Keyboard and Mouse
 
-[![](https://www.kodugamelab.com/API/Thumbnail?world=zoFaHmFpPUaSMNWLUIzqCA==)](https://worlds.kodugamelab.com/world/zoFaHmFpPUaSMNWLUIzqCA==)
+[![](kodu_curriculum_with_keyboard_and_mouse.png)](https://worlds.kodugamelab.com/world/zoFaHmFpPUaSMNWLUIzqCA==)
 
 ## Kodu Curriculum with Keyboard and Mouse
 ![Digital Technology](dt.png) ![Computer Science](cs.png)

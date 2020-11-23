@@ -7,7 +7,7 @@ hero_height: is-small
 
 [Home](..)/[Resources](.)/Water Cycle Model
 
-[![](https://www.kodugamelab.com/API/Thumbnail?world=fze6aXWb1kWSICi7zTAWuw==)](https://worlds.kodugamelab.com/world/fze6aXWb1kWSICi7zTAWuw==)
+[![](water_cycle_model.png)](https://worlds.kodugamelab.com/world/fze6aXWb1kWSICi7zTAWuw==)
 
 ## Water Cycle Model
 ![Digital Technology](dt.png) ![Computer Science](cs.png) ![Science](s.png)

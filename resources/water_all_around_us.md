@@ -7,7 +7,7 @@ hero_height: is-small
 
 [Home](..)/[Resources](.)/Water All Around Us
 
-[![](https://www.kodugamelab.com/API/Thumbnail?world=PsRcFpC7NkizkBigOlk7lQ==)](https://worlds.kodugamelab.com/world/PsRcFpC7NkizkBigOlk7lQ==)
+[![](water_all_around_us.png)](https://worlds.kodugamelab.com/world/PsRcFpC7NkizkBigOlk7lQ==)
 
 ## Water All Around Us
 ![Digital Technology](dt.png) ![Computer Science](cs.png) ![Science](s.png)

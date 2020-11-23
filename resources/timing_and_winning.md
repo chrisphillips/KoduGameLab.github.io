@@ -8,7 +8,7 @@ hero_height: is-small
 
 [Home](..)/[Resources](.)/Timing and Winning
 
-[![](https://www.kodugamelab.com/API/Thumbnail?world=lCJFKwhSpkO5fCOv0_otIA==)](https://worlds.kodugamelab.com/world/lCJFKwhSpkO5fCOv0_otIA==)
+[![](timing_and_winning.png)](https://worlds.kodugamelab.com/world/lCJFKwhSpkO5fCOv0_otIA==)
 
 ## Timing and Winning
 ![Digital Technology](dt.png) ![Computer Science](cs.png) ![Math](m.png)

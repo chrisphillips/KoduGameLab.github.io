@@ -7,7 +7,7 @@ hero_height: is-small
 
 [Home](..)/[Resources](.)/Programming a Rover
 
-[![](https://www.kodugamelab.com/API/Thumbnail?world=cEZQ2Vm-50izIKsKd0M5kg==)](https://worlds.kodugamelab.com/world/cEZQ2Vm-50izIKsKd0M5kg==)
+[![](programming_a_rover.png)](https://worlds.kodugamelab.com/world/cEZQ2Vm-50izIKsKd0M5kg==)
 
 ## Programming a Rover
 ![Digital Technology](dt.png) ![Computer Science](cs.png) ![Science](s.png)

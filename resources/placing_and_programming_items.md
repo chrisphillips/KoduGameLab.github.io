@@ -8,7 +8,7 @@ hero_height: is-small
 
 [Home](..)/[Resources](.)/Placing and Programming Items
 
-[![](https://www.kodugamelab.com/API/Thumbnail?world=HdaeSwIuKUmdSEie6b4RGQ==)](https://worlds.kodugamelab.com/world/HdaeSwIuKUmdSEie6b4RGQ==)
+[![](placing_and_programming_items.png)](https://worlds.kodugamelab.com/world/HdaeSwIuKUmdSEie6b4RGQ==)
 
 ## Obstacle Course
 ![Digital Technology](dt.png) ![Computer Science](cs.png) ![Math](m.png)

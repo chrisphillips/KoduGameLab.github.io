@@ -7,7 +7,7 @@ hero_height: is-small
 
 [Home](..)/[Resources](.)/Exploration and Modifying
 
-[![](https://www.kodugamelab.com/API/Thumbnail?world=3M1kkWjzb0ateucfWn9LcQ==)](https://worlds.kodugamelab.com/world/3M1kkWjzb0ateucfWn9LcQ==)
+[![](exploration_and_modifying.png)](https://worlds.kodugamelab.com/world/3M1kkWjzb0ateucfWn9LcQ==)
 
 ## Exploration and Modifying
 ![Digital Technology](dt.png) ![Computer Science](cs.png)

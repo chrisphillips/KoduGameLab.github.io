@@ -7,7 +7,7 @@ hero_height: is-small
 
 [Home](..)/[Resources](.)/Pushing the Boundaries
 
-[![](https://www.kodugamelab.com/API/Thumbnail?world=6SGgz67hJUaI256NPWFpbg==)](https://worlds.kodugamelab.com/world/6SGgz67hJUaI256NPWFpbg==)
+[![](pushing_the_boundaries.png)](https://worlds.kodugamelab.com/world/6SGgz67hJUaI256NPWFpbg==)
 
 ## Pushing the Boundaries
 ![Digital Technology](dt.png) ![Computer Science](cs.png)

@@ -10,7 +10,7 @@ hide_hero: true
 
 [Home](../..)/[Resources](..)/Bucket Toss
 
-[![](https://www.kodugamelab.com/API/Thumbnail?world=ivQABN6jkUa5MD5gx27Qrg==)](https://worlds.kodugamelab.com/world/ivQABN6jkUa5MD5gx27Qrg==)
+[![](bucket_toss.png)](https://worlds.kodugamelab.com/world/ivQABN6jkUa5MD5gx27Qrg==)
 
 ![Digital Technology](../dt.png) ![Computer Science](../cs.png) ![robotics](../r.png)
 

@@ -7,7 +7,7 @@ hero_height: is-small
 
 [Home](..)/[Resources](.)/Single Session Introduction for PC and Xbox Controller
 
-[![](https://www.kodugamelab.com/API/Thumbnail?world=qCuGGZ0pfUChRiO1_lkbsw==)](https://worlds.kodugamelab.com/world/qCuGGZ0pfUChRiO1_lkbsw==)
+[![](single_session_introduction_for_pc_and_xbox_controller.png)](https://worlds.kodugamelab.com/world/qCuGGZ0pfUChRiO1_lkbsw==)
 
 ## Single Session Introduction for PC and Xbox Controller
 ![Digital Technology](dt.png) ![Computer Science](cs.png)

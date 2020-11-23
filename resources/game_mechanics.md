@@ -7,7 +7,7 @@ hero_height: is-small
 
 [Home](..)/[Resources](.)/Game Mechanics
 
-[![](https://www.kodugamelab.com/API/Thumbnail?world=O0Qlh0XHf06FrpZzMuqvJg==)](https://worlds.kodugamelab.com/world/O0Qlh0XHf06FrpZzMuqvJg==)
+[![](game_mechanics.png)](https://worlds.kodugamelab.com/world/O0Qlh0XHf06FrpZzMuqvJg==)
 
 ## Game Mechanics
 ![Digital Technology](dt.png) ![Computer Science](cs.png)

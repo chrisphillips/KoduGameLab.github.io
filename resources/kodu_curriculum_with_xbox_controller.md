@@ -7,7 +7,7 @@ hero_height: is-small
 
 [Home](..)/[Resources](.)/Kodu Curriculum with Xbox Controller
 
-[![](https://www.kodugamelab.com/API/Thumbnail?world=a27rHLswIEWezQLRWAa4Pw==)](https://worlds.kodugamelab.com/world/a27rHLswIEWezQLRWAa4Pw==)
+[![](kodu_curriculum_with_xbox_controller.png)](https://worlds.kodugamelab.com/world/a27rHLswIEWezQLRWAa4Pw==)
 
 ## Kodu Curriculum with Xbox Controller
 ![Digital Technology](dt.png) ![Computer Science](cs.png)

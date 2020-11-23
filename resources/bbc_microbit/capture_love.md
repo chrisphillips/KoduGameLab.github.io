@@ -10,7 +10,7 @@ hide_hero: true
 
 [Home](../..)/[Resources](..)/Capture Love
 
-[![](https://www.kodugamelab.com/API/Thumbnail?world=9jjISGyGsESb0A0PUmJz0Q==)](https://worlds.kodugamelab.com/world/9jjISGyGsESb0A0PUmJz0Q==)
+[![](capture_love.png)](https://worlds.kodugamelab.com/world/9jjISGyGsESb0A0PUmJz0Q==)
 
 ![Digital Technology](../dt.png) ![Computer Science](../cs.png) ![robotics](../r.png)
 

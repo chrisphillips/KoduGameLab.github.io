@@ -10,7 +10,7 @@ hide_hero: true
 
 [Home](../..)/[Resources](..)/Finding Sputnik
 
-[![](https://www.kodugamelab.com/API/Thumbnail?world=4PYTRVYnz0m50vbZyxXrUA==)](https://worlds.kodugamelab.com/world/4PYTRVYnz0m50vbZyxXrUA==)
+[![](finding_sputnik.png)](https://worlds.kodugamelab.com/world/4PYTRVYnz0m50vbZyxXrUA==)
 
 ![Digital Technology](../dt.png) ![Computer Science](../cs.png) ![robotics](../r.png)
 
