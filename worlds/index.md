@@ -60,10 +60,10 @@ $().ready(function(){
         $(".world-container").append( $(".world-item").first().clone() );
     }
     //console.log("there");
-    //$.getJSON( "/data.json", function( data ) {
-    //console.log(data);
-    //$("#text").html(data["text"]);
-  //});
+    $.getJSON( "https://koduworlds.azurewebsites.net/", function( data ) {
+        console.log(data);
+        //$("#text").html(data["text"]);
+    });
 });
 </script>
 
