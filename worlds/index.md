@@ -54,12 +54,12 @@ show_sidebar: false
 
 <script>
 $().ready(function(){
-    console.log("here");
-    for(let i = 0;i<20;i++)
+    //console.log("here");
+    for(let i = 0;i<11;i++)
     {
         $(".world-container").append( $(".world-item").first().clone() );
     }
-    console.log("there");
+    //console.log("there");
     //$.getJSON( "/data.json", function( data ) {
     //console.log(data);
     //$("#text").html(data["text"]);
