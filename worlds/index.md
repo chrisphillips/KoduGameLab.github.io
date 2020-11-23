@@ -2,7 +2,6 @@
 title: Kodu Game Lab
 subtitle: 3D game programming for kids.
 layout: page
-hero_height:is-small
 hide_hero: true
 show_sidebar: false
 ---
@@ -13,8 +12,19 @@ show_sidebar: false
             <div class="column is-12">
                 <div class="columns is-multiline world-container">
                       <div class="column is-12">
-                          <p class="title is-6">Latest Worlds
-                          </p>
+                        <nav class="pagination is-rounded" role="navigation" aria-label="pagination">
+                          <a class="pagination-previous">Previous</a>
+                          <a class="pagination-next">Next page</a>
+                          <ul class="pagination-list">
+                            <li><a class="pagination-link" aria-label="Goto page 1">1</a></li>
+                            <li><span class="pagination-ellipsis">&hellip;</span></li>
+                            <li><a class="pagination-link" aria-label="Goto page 45">45</a></li>
+                            <li><a class="pagination-link is-current" aria-label="Page 46" aria-current="page">46</a></li>
+                            <li><a class="pagination-link" aria-label="Goto page 47">47</a></li>
+                            <li><span class="pagination-ellipsis">&hellip;</span></li>
+                            <li><a class="pagination-link" aria-label="Goto page 86">86</a></li>
+                          </ul>
+                        </nav>                          
                       </div>
                       <div class="column is-2-desktop is-6-tablet world-item">
                         <a href="/bulma-clean-theme/products/product2/">
