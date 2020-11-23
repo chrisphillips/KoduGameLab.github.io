@@ -14,7 +14,7 @@ show_sidebar: false
                           <p class="title is-3">Latest Worlds
                           </p>
                       </div>
-                      <div class="column is-3-desktop is-4-tablet world-item">
+                      <div class="column is-2-desktop is-4-tablet world-item">
                         <a href="/bulma-clean-theme/products/product2/">
                           <div class="card">
                             <div class="card-image">
