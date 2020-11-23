@@ -1,7 +1,5 @@
 - name: Blog
   link: /blog/
-- name: Worlds
-  link: /worlds/
 - name: FAQ
   link: /faq/
 - name: Tips
