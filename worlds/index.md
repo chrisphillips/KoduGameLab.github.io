@@ -3,12 +3,12 @@ title: Kodu Game Lab
 subtitle: 3D game programming for kids.
 layout: page
 hero_height:is-small
+hide_hero: true
 show_sidebar: false
 ---
 
 # Latest
-
-<section class="section">
+    <section class="section">
         <div class="container">
             <div class="columns">
                 <div class="column is-12">
@@ -46,7 +46,7 @@ $().ready(function(){
     console.log("here");
     for(let i = 0;i<20;i++)
     {
-        $(".world-container").append( $(".world-item")[0].clone() );
+        $(".world-container").append( $(".world-item").first().clone() );
     }
     console.log("there");
     //$.getJSON( "/data.json", function( data ) {
