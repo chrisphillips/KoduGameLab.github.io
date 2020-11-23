@@ -5,17 +5,16 @@ layout: page
 hide_hero: true
 show_sidebar: false
 ---
-
 <section class="section">
     <div class="container">
         <div class="columns">
             <div class="column is-12">
                 <div class="columns is-multiline world-container">
                       <div class="column is-12">
-                          <p class="title is-6">Latest Worlds
+                          <p class="title is-3">Latest Worlds
                           </p>
                       </div>
-                      <div class="column is-2-desktop is-6-tablet world-item">
+                      <div class="column is-3-desktop is-4-tablet world-item">
                         <a href="/bulma-clean-theme/products/product2/">
                           <div class="card">
                             <div class="card-image">
@@ -50,8 +49,6 @@ show_sidebar: false
         </div>
     </div>
 </section>
-
-# Featured
 
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 
