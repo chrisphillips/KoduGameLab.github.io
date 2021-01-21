@@ -35,11 +35,10 @@ show_sidebar: false
                       <a class="pagination-previous">Previous</a>
                       <a class="pagination-next">Next page</a>
                       <ul class="pagination-list" style="list-style: none;">
-                        <li><a class="pagination-link" aria-label="Goto page 1">1</a></li>
-                        <li><span class="pagination-ellipsis">&hellip;</span></li>
-                        <li><a class="pagination-link" aria-label="Goto page 45">45</a></li>
-                        <li><a class="pagination-link is-current" aria-label="Page 46" aria-current="page">46</a></li>
-                        <li><a class="pagination-link" aria-label="Goto page 47">47</a></li>
+                        <li><a class="pagination-link is-current" aria-label="Page 1" aria-current="page">1</a></li>
+                        <li><a class="pagination-link" aria-label="Goto page 2">2</a></li>
+                        <li><a class="pagination-link" aria-label="Goto page 3">3</a></li>
+                        <li><a class="pagination-link" aria-label="Goto page 4">4</a></li>
                         <li><span class="pagination-ellipsis">&hellip;</span></li>
                         <li><a class="pagination-link" aria-label="Goto page 86">86</a></li>
                       </ul>
