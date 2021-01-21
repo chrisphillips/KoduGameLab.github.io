@@ -11,7 +11,7 @@ show_sidebar: false
             <div class="column is-12">
                 <div class="columns is-multiline world-container">
                       <div class="column is-12">
-                          <p class="title is-3">Latest Worlds
+                          <p data-type='resulttitle' class="title is-3">Latest Worlds
                           </p>
                       </div>
                       <div class="column is-2-desktop is-4-tablet world-item">
@@ -63,7 +63,10 @@ $().ready(function(){
     let url = "https://koduworlds.azurewebsites.net/oldhome"
     let search = document.URL.split("?q=")[1]
     if(search)
+    {
         url = "https://koduworlds.azurewebsites.net/search/"+search
+        $("[data-type='resulttitle']").text("Results for:"+search)
+    }
     //console.log("there");
     $.post( url, function( data ) {
         console.log(data);
