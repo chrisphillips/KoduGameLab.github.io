@@ -25,7 +25,7 @@ show_sidebar: false
                             <div class="card-content p-3">
                               <p data-type='worldname' class="title is-6">World Name
                               </p><p data-type='authorname' class="subtitle is-6">by Author Name</p>  
-                              <p data-type='ago' class="timeago title is-7 has-text-right">X days Ago</p>
+                              <time data-type='ago' class="timeago title is-7 has-text-right">X days Ago</time>
                             </div>
                           </div>
                         </a>
