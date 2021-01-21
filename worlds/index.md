@@ -25,7 +25,7 @@ show_sidebar: false
                             <div class="card-content p-3">
                               <p data-type='worldname' class="title is-6">World Name
                               </p><p data-type='authorname' class="subtitle is-6">by Author Name</p>  
-                              <p data-type='ago' class="title is-7 has-text-right">X days Ago</p>
+                              <p data-type='ago' class="timeago title is-7 has-text-right">X days Ago</p>
                             </div>
                           </div>
                         </a>
@@ -67,11 +67,13 @@ $().ready(function(){
             item.find("[data-type='worldname']").text(world.Name);
             item.find("[data-type='authorname']").text("by "+world.Creator);
             item.find("[data-type='ago']").text(world.Modified);
+            item.find("[data-type='ago']").attr("datetime",world.Modified);
             item.find("[data-type='thumbnail']").attr("src","https://koduworlds.azurewebsites.net/oldthumb/"+world.WorldId+"/thumb")
             item.show();//defaults to hidden so show.
             //console.log();                    
             $(".world-container").append(item );
         }
+        $(".timeago").timeago();
     });
 });
 </script>
