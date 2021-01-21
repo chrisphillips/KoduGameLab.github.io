@@ -58,7 +58,10 @@ $().ready(function(){
     for(let i = 0;i<11;i++)
     {
         let item=$(".world-item").first().clone();
-        console.log(item.find("[data-type='worldname']"));                    
+        item.find("[data-type='worldname']").text("Blah");
+        item.find("[data-type='authorname']").text("Blech");
+        item.find("[data-type='ago']").text("1 year");
+        console.log(item.find("[data-type='ago']").attr("src"));                    
         $(".world-container").append(item );
     }
     //console.log("there");
