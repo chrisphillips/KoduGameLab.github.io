@@ -60,7 +60,7 @@ $().ready(function(){
     jQuery.timeago.settings.strings.hour = "1 hour";
     jQuery.timeago.settings.strings.hours = "%d hours";
     
-    let url = "https://koduworlds.azurewebsites.net/oldhome"
+    let url = "https://koduworlds.azurewebsites.net/latest"
     let search = document.URL.split("?q=")[1]
     if(search)
     {
@@ -69,18 +69,20 @@ $().ready(function(){
     }
     //console.log("there");
     $.post( url, function( data ) {
-        console.log(data);
+        //console.log(data);
         //$("#text").html(data["text"]);
         for(world of data)
         {
+            //copy first item (template)
             let item=$(".world-item").first().clone();
+            //and fill it in with world data
             item.find("[data-type='worldname']").text(world.Name);
             item.find("[data-type='authorname']").text("by "+world.Creator);
             item.find("[data-type='ago']").text(world.Modified);
             item.find("[data-type='ago']").attr("datetime",world.Modified);
-            item.find("[data-type='thumbnail']").attr("src","https://koduworlds.azurewebsites.net/oldthumb/"+world.WorldId+"/thumb")
+            item.find("[data-type='thumbnail']").attr("src","https://koduworlds.azurewebsites.net/thumbnail/"+world.WorldId)
             item.show();//defaults to hidden so show.
-            //console.log();                    
+
             $(".world-container").append(item );
         }
         $(".timeago").timeago();
