@@ -57,17 +57,21 @@ $().ready(function(){
     //console.log("here");
     for(let i = 0;i<11;i++)
     {
-        let item=$(".world-item").first().clone();
-        item.find("[data-type='worldname']").text("Blah");
-        item.find("[data-type='authorname']").text("Blech");
-        item.find("[data-type='ago']").text("1 year");
-        console.log(item.find("[data-type='ago']").attr("src"));                    
-        $(".world-container").append(item );
+
     }
     //console.log("there");
-    $.getJSON( "https://koduworlds.azurewebsites.net/oldhome", function( data ) {
+    $.post( "https://koduworlds.azurewebsites.net/oldhome", function( data ) {
         console.log(data);
         //$("#text").html(data["text"]);
+        for(world of data)
+        {
+            let item=$(".world-item").first().clone();
+            item.find("[data-type='worldname']").text(world.Name);
+            item.find("[data-type='authorname']").text("by "+world.Creator);
+            item.find("[data-type='ago']").text("1 year");
+            console.log(item.find("[data-type='thumbnail']").attr("src"));                    
+            $(".world-container").append(item );
+        }
     });
 });
 </script>
