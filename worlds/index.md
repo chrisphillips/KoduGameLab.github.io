@@ -60,7 +60,7 @@ $().ready(function(){
         $(".world-container").append( $(".world-item").first().clone() );
     }
     //console.log("there");
-    $.getJSON( "https://koduworlds.azurewebsites.net/oldhome", function( data ) {
+    $.getJSON( "https://koduworlds.azurewebsites.net/", function( data ) {
         console.log(data);
         //$("#text").html(data["text"]);
     });
