@@ -57,7 +57,7 @@ $().ready(function(){
     //console.log("here");
     for(let i = 0;i<11;i++)
     {
-        let item $(".world-item").first().clone()
+        let item=$(".world-item").first().clone();
         console.log(item.find("[data-type='worldname']"));                    
         $(".world-container").append(item );
     }
