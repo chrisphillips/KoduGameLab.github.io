@@ -40,7 +40,7 @@ show_sidebar: false
                         <li><a class="pagination-link" aria-label="Goto page 3">3</a></li>
                         <li><a class="pagination-link" aria-label="Goto page 4">4</a></li>
                         <li><span class="pagination-ellipsis">&hellip;</span></li>
-                        <li><a class="pagination-link" aria-label="Goto page 86">86</a></li>
+                        <li><a class="pagination-link" aria-label="Goto page 10">10</a></li>
                       </ul>
                     </nav>                  
                
@@ -60,8 +60,12 @@ $().ready(function(){
     jQuery.timeago.settings.strings.hour = "1 hour";
     jQuery.timeago.settings.strings.hours = "%d hours";
     
+    let url = "https://koduworlds.azurewebsites.net/oldhome"
+    let search = document.URL.split("?q=")[1]
+    if(search)
+        url = "https://koduworlds.azurewebsites.net/search/"+search
     //console.log("there");
-    $.post( "https://koduworlds.azurewebsites.net/oldhome", function( data ) {
+    $.post( url, function( data ) {
         console.log(data);
         //$("#text").html(data["text"]);
         for(world of data)
