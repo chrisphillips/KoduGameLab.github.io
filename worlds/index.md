@@ -55,10 +55,8 @@ show_sidebar: false
 <script>
 $().ready(function(){
     //console.log("here");
-    for(let i = 0;i<11;i++)
-    {
-
-    }
+    $(".world-item").hide();//hide template at start.
+    
     //console.log("there");
     $.post( "https://koduworlds.azurewebsites.net/oldhome", function( data ) {
         console.log(data);
@@ -68,9 +66,10 @@ $().ready(function(){
             let item=$(".world-item").first().clone();
             item.find("[data-type='worldname']").text(world.Name);
             item.find("[data-type='authorname']").text("by "+world.Creator);
-            item.find("[data-type='ago']").text("1 year");
+            item.find("[data-type='ago']").text(world.Modified);
             item.find("[data-type='thumbnail']").attr("src","https://koduworlds.azurewebsites.net/oldthumb/"+world.WorldId+"/thumb")
-            console.log();                    
+            item.show();//defaults to hidden so show.
+            //console.log();                    
             $(".world-container").append(item );
         }
     });
