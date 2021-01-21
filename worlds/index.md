@@ -56,9 +56,9 @@ show_sidebar: false
 $().ready(function(){
     //console.log("here");
     $(".world-item").hide();//hide template at start.
-    jQuery.timeago.settings.strings.minute = "1 minute ago";//remove "about" (ug)
-    jQuery.timeago.settings.strings.hour = "1 hour ago";
-    jQuery.timeago.settings.strings.hours = "%d hours ago";
+    jQuery.timeago.settings.strings.minute = "1 minute";//remove "about" (ug)
+    jQuery.timeago.settings.strings.hour = "1 hour";
+    jQuery.timeago.settings.strings.hours = "%d hours";
     
     //console.log("there");
     $.post( "https://koduworlds.azurewebsites.net/oldhome", function( data ) {
