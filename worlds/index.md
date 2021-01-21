@@ -69,7 +69,8 @@ $().ready(function(){
             item.find("[data-type='worldname']").text(world.Name);
             item.find("[data-type='authorname']").text("by "+world.Creator);
             item.find("[data-type='ago']").text("1 year");
-            console.log(item.find("[data-type='thumbnail']").attr("src"));                    
+            item.find("[data-type='thumbnail']").attr("src","https://koduworlds.azurewebsites.net/oldthumb/"+world.WorldId+"/thumb")
+            console.log();                    
             $(".world-container").append(item );
         }
     });
