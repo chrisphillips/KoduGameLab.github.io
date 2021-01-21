@@ -25,7 +25,7 @@ show_sidebar: false
                             <div class="card-content p-3">
                               <p data-type='worldname' class="title is-6">World Name
                               </p><p data-type='authorname' class="subtitle is-6">by Author Name</p>  
-                              <time data-type='ago' class="timeago title is-7 has-text-right">X days Ago</time>
+                              <p><time data-type='ago' class="timeago title is-7 has-text-right">X days Ago</time></p>
                             </div>
                           </div>
                         </a>
@@ -56,6 +56,9 @@ show_sidebar: false
 $().ready(function(){
     //console.log("here");
     $(".world-item").hide();//hide template at start.
+    jQuery.timeago.settings.strings.minute = "1 minute ago";//remove "about" (ug)
+    jQuery.timeago.settings.strings.hour = "1 hour ago";
+    jQuery.timeago.settings.strings.hours = "%d hours ago";
     
     //console.log("there");
     $.post( "https://koduworlds.azurewebsites.net/oldhome", function( data ) {
