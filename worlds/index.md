@@ -19,13 +19,13 @@ show_sidebar: false
                           <div class="card">
                             <div class="card-image">
                               <figure class="image is-4by3">
-                                <img src="https://via.placeholder.com/128x128" alt="World Name">
+                                <img data-type='thumbnail' src="https://via.placeholder.com/128x128" alt="World Name">
                               </figure>
                             </div>
                             <div class="card-content p-3">
-                              <p class="title is-6">World Name
-                              </p><p class="subtitle is-6">by Author Name</p>  
-                              <p class="title is-7 has-text-right">X days Ago</p>
+                              <p data-type='worldname' class="title is-6">World Name
+                              </p><p data-type='authorname' class="subtitle is-6">by Author Name</p>  
+                              <p data-type='ago' class="title is-7 has-text-right">X days Ago</p>
                             </div>
                           </div>
                         </a>
@@ -57,7 +57,9 @@ $().ready(function(){
     //console.log("here");
     for(let i = 0;i<11;i++)
     {
-        $(".world-container").append( $(".world-item").first().clone() );
+        let item $(".world-item").first().clone()
+        console.log(item.find("[data-type='worldname']"));                    
+        $(".world-container").append(item );
     }
     //console.log("there");
     $.getJSON( "https://koduworlds.azurewebsites.net/oldhome", function( data ) {
