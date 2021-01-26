@@ -80,7 +80,7 @@ $().ready(function(){
             item.find("[data-type='authorname']").text("by "+world.Creator);
             item.find("[data-type='ago']").text(world.Modified);
             item.find("[data-type='ago']").attr("datetime",world.Modified);
-            item.find("[data-type='thumbnail']").attr("src","https://koduworlds.azurewebsites.net/thumbnail/"+world.WorldId)
+            item.find("[data-type='thumbnail']").attr("src","https://koduworlds.azurewebsites.net/thumbnail/"+world.PrimaryId)
             item.show();//defaults to hidden so show.
 
             $(".world-container").append(item );
