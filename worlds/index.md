@@ -67,6 +67,12 @@ $().ready(function(){
         url = "https://koduworlds.azurewebsites.net/search/"+search
         $("[data-type='resulttitle']").text("Results for:"+search)
     }
+    let top = document.URL.split("?top=")[1]
+    if(top)
+    {
+        url = "https://koduworlds.azurewebsites.net/top"
+        $("[data-type='resulttitle']").text("Top worlds")
+    }    
     //console.log("there");
     $.post( url, function( data ) {
         //console.log(data);
