@@ -53,6 +53,8 @@ show_sidebar: false
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-timeago/1.6.7/jquery.timeago.min.js" crossorigin="anonymous"></script>
 
 <script>
+var curFirst=0;
+var curCount=6*6;//six rows of six each
 $().ready(function(){
     //console.log("here");
     $(".world-item").hide();//hide template at start.
@@ -61,6 +63,7 @@ $().ready(function(){
     jQuery.timeago.settings.strings.hours = "%d hours";
     
     let url = "https://koduworlds.azurewebsites.net/latest"
+    let urlArgs= "?first="+curFirst+"&count="+curCount"
     let search = document.URL.split("?q=")[1]
     if(search)
     {
@@ -88,6 +91,11 @@ $().ready(function(){
             item.find("[data-type='ago']").attr("datetime",world.Modified);
             item.find("[data-type='thumbnail']").attr("src","https://koduworlds.azurewebsites.net/thumbnail/"+world.PrimaryId)
             item.show();//defaults to hidden so show.
+            
+            item.on("click",function(e){
+                console.log(e)
+                $(e).addClass("zoom")
+            })
 
             $(".world-container").append(item );
         }
