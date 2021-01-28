@@ -8,9 +8,10 @@ show_sidebar: false
 
 <style>
 .description {
-  color: maroon;
+  display: none;
 }
 .modal .description {
+  display: unset;
   color: green;
 }
 </style>
@@ -95,6 +96,10 @@ $().ready(function(){
         $("[data-type='resulttitle']").text("Top worlds")
     }    
     //console.log("there");
+    $(".modal-background").on("click",function(e){
+      $(".is-active").removeClass("is-active")
+    })
+    
     $.post( url+urlArgs, function( data ) {
         //console.log(data);
         //$("#text").html(data["text"]);
