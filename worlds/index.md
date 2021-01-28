@@ -5,6 +5,16 @@ layout: page
 hide_hero: true
 show_sidebar: false
 ---
+
+<style>
+.description {
+  color: maroon;
+}
+.modal .description {
+  color: green;
+}
+</style>
+
 <section class="section">
     <div class="container">
         <div class="columns">
@@ -23,9 +33,9 @@ show_sidebar: false
                               </figure>
                             </div>
                             <div class="card-content p-3">
-                              <p data-type='worldname' class="title is-6">World Name
-                              </p><p data-type='authorname' class="subtitle is-6">by Author Name</p>  
-                              </p><p data-type='description' class="subtitle is-6">Description</p>  
+                              <p data-type='worldname' class="title is-6">World Name</p>
+                              <p data-type='authorname' class="subtitle is-6">by Author Name</p>  
+                              <p data-type='description' class="description subtitle is-6">Description</p>  
                               <p><time data-type='ago' class="timeago title is-7 has-text-right">X days Ago</time></p>
                             </div>
                           </div>
