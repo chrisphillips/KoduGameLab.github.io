@@ -155,11 +155,15 @@ $().ready(function(){
     $(".search").on("input",function(){
       let filter = $(".search").val()
       console.log(filter);
-      console.log(document.location);
+      let newPath = document.origin+document.pathName+'/?q='+filter
+      console.log(newPath);
+      if(document.search.indexOf("?top=1") ||document.search.indexOf("&top=1")
+        newPath+="&top=1"
+      
 
       window.history.pushState({
           id: 'search'
-      }, 'Search | Kodu Worlds', document.location+'/?q='+filter);
+      }, 'Search | Kodu Worlds', newPath);
     });
     
     let curFirst=0;
