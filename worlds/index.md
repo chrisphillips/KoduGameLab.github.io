@@ -22,11 +22,13 @@ show_sidebar: false
   display:unset;
   float: right;
   margin: 10px;
-  background-color:blue;
+  background-color:darkturquoise;
 }
 </style>
 
 <section class="section">
+    <div class='button'>Latest</div>
+    <div class='button'>Top</div>
     <div class="container">
         <div class="columns">
             <div class="column is-12">
