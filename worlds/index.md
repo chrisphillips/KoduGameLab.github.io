@@ -23,10 +23,6 @@ show_sidebar: false
   float: right;
   margin: 10px;
 }
-.resulttitle
-{
-  float: left;
-}  
 .sort-button
 {
   float: right;
@@ -40,7 +36,7 @@ show_sidebar: false
             <div class="column is-12">
                 <div class="columns is-multiline world-container">
                       <div class="column is-12">
-                          <p data-type='resulttitle' class="title is-3">Latest Worlds
+                          <p data-type='resulttitle' style='float: left;' class="title is-3">Latest Worlds
                           </p>
                           <div class='button sort-button'>Top</div>
                           <div class='button sort-button is-primary'>Latest</div>
@@ -72,15 +68,10 @@ show_sidebar: false
                           <div style='float:right' class='button more-button is-primary'>Moar</div>
                       </div>              
                     <nav class="pagination is-rounded" role="navigation" aria-label="pagination">
-                      <a class="pagination-previous">Previous</a>
                       <a class="pagination-next">Next page</a>
                       <ul class="pagination-list" style="list-style: none;">
                         <li><a class="pagination-link is-current" aria-label="Page 1" aria-current="page">1</a></li>
                         <li><a class="pagination-link" aria-label="Goto page 2">2</a></li>
-                        <li><a class="pagination-link" aria-label="Goto page 3">3</a></li>
-                        <li><a class="pagination-link" aria-label="Goto page 4">4</a></li>
-                        <li><span class="pagination-ellipsis">&hellip;</span></li>
-                        <li><a class="pagination-link" aria-label="Goto page 10">10</a></li>
                       </ul>
                     </nav>                  
                
