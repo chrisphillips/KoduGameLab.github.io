@@ -67,7 +67,7 @@ show_sidebar: false
                       </div>
                     </div>
                       <div class="column is-12">
-                          <p data-type='more-button' class="title is-3">Loading...
+                          <p data-type='more-button' style='float:left' class="title is-3">Loading...
                           </p>
                           <div style='float:right' class='button more-button is-primary'>Moar</div>
                       </div>              
@@ -162,12 +162,12 @@ $().ready(function(){
     $(".more-button").on("click",function(){
       let urlArgs= "?first="+curFirst+"&count="+curCount
       getWorldsPage(baseUrl+urlArgs)
-      curFirst+=count;
+      curFirst+=curCount;
     });    
   
     let urlArgs= "?first="+curFirst+"&count="+curCount
     getWorldsPage(baseUrl+urlArgs)
-    curFirst+=count;
+    curFirst+=curCount;
 
 });
 </script>
