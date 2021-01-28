@@ -63,7 +63,7 @@ $().ready(function(){
     jQuery.timeago.settings.strings.hours = "%d hours";
     
     let url = "https://koduworlds.azurewebsites.net/latest"
-    let urlArgs= "?first="+curFirst+"&count="+curCount"
+    let urlArgs= "?first="+curFirst+"&count="+curCount
     let search = document.URL.split("?q=")[1]
     if(search)
     {
@@ -77,7 +77,7 @@ $().ready(function(){
         $("[data-type='resulttitle']").text("Top worlds")
     }    
     //console.log("there");
-    $.post( url, function( data ) {
+    $.post( url+urlArgs, function( data ) {
         //console.log(data);
         //$("#text").html(data["text"]);
         for(world of data)
