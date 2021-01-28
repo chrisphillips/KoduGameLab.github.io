@@ -22,13 +22,12 @@ show_sidebar: false
   display:unset;
   float: right;
   margin: 10px;
-  background-color:darkturquoise;
 }
 </style>
 
 <section class="section">
     <div class='button'>Latest</div>
-    <div class='button'>Top</div>
+    <div class='button is-primary'>Top</div>
     <div class="container">
         <div class="columns">
             <div class="column is-12">
@@ -36,6 +35,7 @@ show_sidebar: false
                       <div class="column is-12">
                           <p data-type='resulttitle' class="title is-3">Latest Worlds
                           </p>
+                          <div class='button is-primary'>Top</div>
                       </div>
                       <div class="column is-2-desktop is-4-tablet world-item">
                         <a href="#">
@@ -49,7 +49,7 @@ show_sidebar: false
                               <p data-type='worldname' class="title is-6">World Name</p>
                               <p data-type='authorname' class="subtitle is-6">by Author Name</p>  
                               <p data-type='description' class="description subtitle is-6">Description</p>  
-                              <div class='button'>Download</div>
+                              <div class='button is-primary'>Download</div>
                               <p>
                                 <time data-type='ago' class="timeago title is-7 has-text-right">X days Ago</time>
                               </p>
