@@ -15,7 +15,7 @@ show_sidebar: false
                           </p>
                       </div>
                       <div class="column is-2-desktop is-4-tablet world-item">
-                        <a href="/bulma-clean-theme/products/product2/">
+                        <a href="#">
                           <div class="card">
                             <div class="card-image">
                               <figure class="image is-4by3">
@@ -94,6 +94,7 @@ $().ready(function(){
             
             item.on("click",function(e){
                 console.log(e)
+                $(".world-item").removeClass("zoom")
                 $(e).addClass("zoom")
             })
 
