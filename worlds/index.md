@@ -101,15 +101,10 @@ show_sidebar: false
 
 
 <script>
-var curFirst=0;
-var curCount=6*6;//six rows of six each
+
 var baseUrl = "https://koduworlds.azurewebsites.net/latest"
 function getWorldsPage(url)
 {
-  let urlArgs= "?first="+curFirst+"&count="+curCount
-  getWorldsPage(url+urlArgs);
-  curFirst+=count;
-
   $.post( url, function( data ) {
       for(world of data)
       {
@@ -161,10 +156,18 @@ $().ready(function(){
     $(".modal-background").on("click",function(e){
       $(".is-active").removeClass("is-active")
     })
+    
+    let curFirst=0;
+    let curCount=6*6;//six rows of six each
     $(".more-button").on("click",function(){
-      getWorldsPage(baseUrl)
+      let urlArgs= "?first="+curFirst+"&count="+curCount
+      getWorldsPage(baseUrl+urlArgs)
+      curFirst+=count;
     });    
-    getWorldsPage(baseUrl)
+  
+    let urlArgs= "?first="+curFirst+"&count="+curCount
+    getWorldsPage(baseUrl+urlArgs)
+    curFirst+=count;
 
 });
 </script>
