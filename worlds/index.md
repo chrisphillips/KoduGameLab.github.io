@@ -7,12 +7,21 @@ show_sidebar: false
 ---
 
 <style>
-.description {
+.world-item .button {
   display: none;
 }
-.modal .description {
+.world-item .description {
+  display: none;
+}
+.modal .world-item .description {
   display: unset;
   color: green;
+}
+.modal .world-item .button
+{
+  display:unset;
+  float: right;
+  margin: 10px;
 }
 </style>
 
@@ -38,6 +47,7 @@ show_sidebar: false
                               <p data-type='authorname' class="subtitle is-6">by Author Name</p>  
                               <p data-type='description' class="description subtitle is-6">Description</p>  
                               <p><time data-type='ago' class="timeago title is-7 has-text-right">X days Ago</time></p>
+                              <button class='button'>Download</button>
                             </div>
                           </div>
                         </a>
@@ -65,7 +75,7 @@ show_sidebar: false
   <div class="modal-background"></div>
   <div class="modal-card">
   </div>
-  <button>Download</button>
+
 </div>
 
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
