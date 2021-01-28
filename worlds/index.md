@@ -67,7 +67,7 @@ show_sidebar: false
                       </div>
                     </div>
                       <div class="column is-12">
-                          <p data-type='resulttitle' class="title is-3">Loading...
+                          <p data-type='more-button' class="title is-3">Loading...
                           </p>
                           <div style='float:right' class='button more-button is-primary'>Moar</div>
                       </div>              
@@ -161,7 +161,7 @@ $().ready(function(){
     $(".modal-background").on("click",function(e){
       $(".is-active").removeClass("is-active")
     })
-    $(".more-button").on("click",function{
+    $(".more-button").on("click",function(){
       getWorldsPage(baseUrl)
     });    
     getWorldsPage(baseUrl)
