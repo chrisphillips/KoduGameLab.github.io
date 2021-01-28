@@ -22,6 +22,7 @@ show_sidebar: false
   display:unset;
   float: right;
   margin: 10px;
+  background-color:blue;
 }
 </style>
 
@@ -46,9 +47,9 @@ show_sidebar: false
                               <p data-type='worldname' class="title is-6">World Name</p>
                               <p data-type='authorname' class="subtitle is-6">by Author Name</p>  
                               <p data-type='description' class="description subtitle is-6">Description</p>  
+                              <div class='button'>Download</div>
                               <p>
                                 <time data-type='ago' class="timeago title is-7 has-text-right">X days Ago</time>
-                                <div class='button'>Download</div>
                               </p>
                             </div>
                           </div>
