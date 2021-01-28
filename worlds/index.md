@@ -17,7 +17,7 @@ show_sidebar: false
   display: unset;
   color: green;
 }
-.modal.world-item.button
+.modal.world-item .button
 {
   display:unset;
   float: right;
@@ -46,8 +46,10 @@ show_sidebar: false
                               <p data-type='worldname' class="title is-6">World Name</p>
                               <p data-type='authorname' class="subtitle is-6">by Author Name</p>  
                               <p data-type='description' class="description subtitle is-6">Description</p>  
-                              <p><time data-type='ago' class="timeago title is-7 has-text-right">X days Ago</time></p>
-                              <button class='button'>Download</button>
+                              <p>
+                                <time data-type='ago' class="timeago title is-7 has-text-right">X days Ago</time>
+                                <div class='button'>Download</div>
+                              </p>
                             </div>
                           </div>
                         </a>
