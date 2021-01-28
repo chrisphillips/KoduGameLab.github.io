@@ -13,11 +13,11 @@ show_sidebar: false
 .world-item .description {
   display: none;
 }
-.modal .world-item .description {
+.modal.world-item .description {
   display: unset;
   color: green;
 }
-.modal .world-item .button
+.modal.world-item .button
 {
   display:unset;
   float: right;
