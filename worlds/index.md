@@ -65,6 +65,7 @@ show_sidebar: false
   <div class="modal-background"></div>
   <div class="modal-card">
   </div>
+  <button>Download</button>
 </div>
 
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
@@ -110,7 +111,7 @@ $().ready(function(){
             //and fill it in with world data
             item.find("[data-type='worldname']").text(world.Name);
             item.find("[data-type='authorname']").text("by "+world.Creator);
-            item.find("[data-type='description']").text("by "+world.Description);
+            item.find("[data-type='description']").text(world.Description);
             item.find("[data-type='ago']").text(world.Modified);
             item.find("[data-type='ago']").attr("datetime",world.Modified);
             item.find("[data-type='thumbnail']").attr("src","https://koduworlds.azurewebsites.net/thumbnail/"+world.PrimaryId)
