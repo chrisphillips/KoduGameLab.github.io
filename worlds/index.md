@@ -46,7 +46,7 @@ show_sidebar: false
                           <input class="input search" type="text" placeholder="Search" style="float:right;width:200px;margin:3px;">                        
                       </div>
                       <div class="column is-2-desktop is-4-tablet world-item">
-                        <a href="#">
+                        <a href="">
                           <div class="card">
                             <div class="card-image">
                               <figure class="image is-4by3">
@@ -157,7 +157,7 @@ $().ready(function(){
       console.log(filter);
       let newPath = document.origin+document.pathName+'/?q='+filter
       console.log(newPath);
-      if(document.search.indexOf("?top=1") ||document.search.indexOf("&top=1"))
+      if(document.location.indexOf("?top=1") ||document.location.indexOf("&top=1"))
       {
         newPath+="&top=1" //todo proper path appending.
       }
