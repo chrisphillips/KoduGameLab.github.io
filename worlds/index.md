@@ -43,7 +43,7 @@ show_sidebar: false
                           </p>
                           <div class='button sort-button'>Top</div>
                           <div class='button sort-button is-primary'>Latest</div>
-                          <input class="input" type="text" placeholder="Search" style="float:right;width:200px;margin:3px;">                        
+                          <input class="input search" type="text" placeholder="Search" style="float:right;width:200px;margin:3px;">                        
                       </div>
                       <div class="column is-2-desktop is-4-tablet world-item">
                         <a href="#">
@@ -151,6 +151,16 @@ $().ready(function(){
     $(".modal-background").on("click",function(e){
       $(".is-active").removeClass("is-active")
     })
+    
+    $(".search").on("input",function(){
+      let filter = $(".search").val()
+      console.log(filter);
+      console.log(document.location);
+
+      window.history.pushState({
+          id: 'search'
+      }, 'Search | Kodu Worlds', document.location+'/?q='+filter);
+    });
     
     let curFirst=0;
     let curCount=6*6;//six rows of six each
