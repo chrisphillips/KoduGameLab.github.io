@@ -93,9 +93,9 @@ $().ready(function(){
             item.show();//defaults to hidden so show.
             
             item.on("click",function(e){
-                console.log(e)
+                console.log(e.currentTarget)
                 $(".world-item").removeClass("zoom")
-                $(e).addClass("zoom")
+                $(e.currentTarget).addClass("zoom")
             })
 
             $(".world-container").append(item );
