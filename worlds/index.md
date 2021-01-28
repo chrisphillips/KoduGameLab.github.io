@@ -23,6 +23,10 @@ show_sidebar: false
   float: right;
   margin: 10px;
 }
+.resulttitle
+{
+  float: left;
+}  
 .sort-button
 {
   float: right;
