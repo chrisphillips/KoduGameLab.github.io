@@ -27,6 +27,9 @@ show_sidebar: false
 {
   float: right;
   margin: 3px;
+}
+.modal-open {
+    overflow: initial;
 }  
 </style>
 
