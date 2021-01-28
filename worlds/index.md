@@ -25,6 +25,7 @@ show_sidebar: false
                             <div class="card-content p-3">
                               <p data-type='worldname' class="title is-6">World Name
                               </p><p data-type='authorname' class="subtitle is-6">by Author Name</p>  
+                              </p><p data-type='description' class="subtitle is-6">Description</p>  
                               <p><time data-type='ago' class="timeago title is-7 has-text-right">X days Ago</time></p>
                             </div>
                           </div>
@@ -52,17 +53,6 @@ show_sidebar: false
 <div class="modal">
   <div class="modal-background"></div>
   <div class="modal-card">
-    <header class="modal-card-head">
-      <p class="modal-card-title">Modal title</p>
-      <button class="delete" aria-label="close"></button>
-    </header>
-    <section class="modal-card-body">
-      <!-- Content ... -->
-    </section>
-    <footer class="modal-card-foot">
-      <button class="button is-success">Save changes</button>
-      <button class="button">Cancel</button>
-    </footer>
   </div>
 </div>
 
@@ -105,6 +95,7 @@ $().ready(function(){
             //and fill it in with world data
             item.find("[data-type='worldname']").text(world.Name);
             item.find("[data-type='authorname']").text("by "+world.Creator);
+            item.find("[data-type='description']").text("by "+world.Description);
             item.find("[data-type='ago']").text(world.Modified);
             item.find("[data-type='ago']").attr("datetime",world.Modified);
             item.find("[data-type='thumbnail']").attr("src","https://koduworlds.azurewebsites.net/thumbnail/"+world.PrimaryId)
@@ -112,8 +103,9 @@ $().ready(function(){
             
             item.on("click",function(e){
                 console.log(e.currentTarget)
-                $(".world-item").removeClass("zoom")
-                $(e.currentTarget).addClass("zoom")
+                //$(".world-item").removeClass("zoom")
+                $(".modal").addClass("is-active")
+                $(".modal-card").html($(e.currentTarget).html())
             })
 
             $(".world-container").append(item );
