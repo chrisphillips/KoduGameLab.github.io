@@ -23,11 +23,14 @@ show_sidebar: false
   float: right;
   margin: 10px;
 }
+.sort-button
+{
+  float: right;
+  margin: 3px;
+}  
 </style>
 
 <section class="section">
-    <div class='button'>Latest</div>
-    <div class='button is-primary'>Top</div>
     <div class="container">
         <div class="columns">
             <div class="column is-12">
@@ -35,7 +38,8 @@ show_sidebar: false
                       <div class="column is-12">
                           <p data-type='resulttitle' class="title is-3">Latest Worlds
                           </p>
-                          <div class='button is-primary'>Top</div>
+                          <div class='button sort-button'>Top</div>
+                          <div class='button sort-button is-primary'>Latest</div>
                       </div>
                       <div class="column is-2-desktop is-4-tablet world-item">
                         <a href="#">
