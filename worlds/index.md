@@ -157,14 +157,19 @@ $().ready(function(){
       console.log(filter);
       let newPath = document.origin+document.pathName+'/?q='+filter
       console.log(newPath);
-      if(document.search.indexOf("?top=1") ||document.search.indexOf("&top=1")
-        newPath+="&top=1"
-      
+      if(document.search.indexOf("?top=1") ||document.search.indexOf("&top=1"))
+      {
+        newPath+="&top=1" //todo proper path appending.
+      }
 
       window.history.pushState({
           id: 'search'
       }, 'Search | Kodu Worlds', newPath);
     });
+    
+    $(".sort-button").on("click",function(e){
+      console.log(e.target);
+    });    
     
     let curFirst=0;
     let curCount=6*6;//six rows of six each
@@ -172,7 +177,9 @@ $().ready(function(){
       let urlArgs= "?first="+curFirst+"&count="+curCount
       getWorldsPage(baseUrl+urlArgs)
       curFirst+=curCount;
-    });    
+    });  
+    
+  
   
     let urlArgs= "?first="+curFirst+"&count="+curCount
     getWorldsPage(baseUrl+urlArgs)
