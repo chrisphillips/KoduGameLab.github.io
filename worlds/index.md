@@ -17,7 +17,7 @@ show_sidebar: false
   display: unset;
   color: green;
 }
-.modal.world-item .button
+.modal .button
 {
   display:unset;
   float: right;
