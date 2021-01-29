@@ -62,7 +62,7 @@ var initFeatured=(function(){
 
 function getFeatured()
 {
-  baseUrl = "https://koduworlds.azurewebsites.net/top"
+  let baseUrl = "https://koduworlds.azurewebsites.net/top"
   let urlArgs= "?first="+parseInt(Math.random()*100)+"&count=7"
   url=baseUrl+urlArgs
   
