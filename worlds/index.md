@@ -155,9 +155,9 @@ $().ready(function(){
     $(".search").on("input",function(){
       let filter = $(".search").val()
       console.log(filter);
-      let newPath = document.location.origin+document.location.pathname+'/?q='+filter
+      let newPath = document.location.origin+document.location.pathname+'?q='+filter
       console.log(newPath);
-      if(document.location.search.indexOf("?top=1") ||document.location.search.indexOf("&top=1"))
+      if(document.location.search.indexOf("?top=1")>-1 ||document.location.search.indexOf("&top=1")>-1)
       {
         newPath+="&top=1" //todo proper path appending.
       }
@@ -170,10 +170,10 @@ $().ready(function(){
     $(".sort-button").on("click",function(e){
       let text = $(e.target).html();
       console.log(text);
+      $(".sort-button").removeClass("is-primary")
+      $(e.target).addClass("is-primary")
       if(text=="Top")
       {
-        $(".sort-button").removeClass("is-primary")
-        $(e.target).addClass("is-primary")
       }
     });    
     
