@@ -8,6 +8,8 @@ hero_link: /downloads
 hero_link_text: Get Kodu
 ---
 
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+## Featured Worlds
 {% include_relative worlds/featured.md %}
 
 <p>
