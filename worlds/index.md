@@ -145,6 +145,7 @@ $().ready(function(){
     {
         baseUrl = "https://koduworlds.azurewebsites.net/search/"+search
         $("[data-type='resulttitle']").text("Results for:"+search)
+        $(".search").val(search)
     }else
     {  
       initFeatured();
@@ -184,6 +185,13 @@ $().ready(function(){
       $(e.target).addClass("is-primary")
       if(text=="Top")
       {
+            let newPath = document.location.origin+document.location.pathname
+            newPath+="?top=1"
+            let filter = $(".search").val().trim();
+            if(filter.length)
+              newPath+='&q='+filter
+            console.log("newPath");
+            window.location=(newPath)
       }
     });    
     
