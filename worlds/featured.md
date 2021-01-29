@@ -2,13 +2,16 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.9/swiper-bundle.css" crossorigin="anonymous" />
 
 <style>
+  
+  .featured-container {
+      /* used https://www.css-gradient.com/ */ 
+    background: linear-gradient(to right bottom, rgb(17, 121, 245), rgb(74, 213, 133));
+  }
+
   .swiper-container {
     width: 100%;
     padding-top: 50px;
     padding-bottom: 50px;
-  
-    //used https://www.css-gradient.com/ 
-    background: linear-gradient(to right bottom, rgb(17, 121, 245), rgb(74, 213, 133));
   }
   .swiper-slide {
     background-position: center;
@@ -19,7 +22,7 @@
 </style>
 
 <!-- Slider main container -->
-<div class="swiper-container">
+<div class="swiper-container featured-container">
   <!-- Additional required wrapper -->
   <div class="swiper-wrapper">
     <!-- Slides -->
@@ -88,14 +91,14 @@ function getFeatured()
       var swiper = new Swiper('.swiper-container', {
         effect: 'coverflow',
         grabCursor: true,
-        centeredSlides: true,
+        centeredSlides: false,
         slidesPerView: 'auto',
         coverflowEffect: {
           rotate: 50,
           stretch: 0,
           depth: 100,
           modifier: 1,
-          slideShadows: true,
+          slideShadows: false,
         },
         keyboard: {
           enabled: true,
