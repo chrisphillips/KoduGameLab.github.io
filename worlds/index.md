@@ -155,7 +155,7 @@ $().ready(function(){
     $(".search").on("input",function(){
       let filter = $(".search").val()
       console.log(filter);
-      let newPath = document.location.origin+document.location.pathName+'/?q='+filter
+      let newPath = document.location.origin+document.location.pathname+'/?q='+filter
       console.log(newPath);
       if(document.location.search.indexOf("?top=1") ||document.location.search.indexOf("&top=1"))
       {
@@ -168,7 +168,12 @@ $().ready(function(){
     });
     
     $(".sort-button").on("click",function(e){
-      console.log(e.target);
+      let text = e.target.html();
+      console.log(text);
+      if(text=="Top")
+      {
+      
+      }
     });    
     
     let curFirst=0;
