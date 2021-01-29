@@ -56,7 +56,7 @@ $().ready(function(){
 function getFeatured()
 {
   baseUrl = "https://koduworlds.azurewebsites.net/top"
-  let urlArgs= "?first=0&count=6"
+  let urlArgs= "?first="+parseInt(Math.random()*100)+"&count=6"
   url=baseUrl+urlArgs
   
   $.post( url, function( data ) {
