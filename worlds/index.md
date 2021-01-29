@@ -118,7 +118,7 @@ function getWorldsPage(url)
           item.find("[data-type='worldname']").text(world.Name);
           item.find("[data-type='authorname']").text("by "+world.Creator);
           item.find("[data-type='description']").text(world.Description);
-          item.find("[data-type='downloads']").text(world.Downloads);
+          item.find("[data-type='downloads']").text(world.Downloads+"&#8681");
           item.find("[data-type='ago']").text(world.Modified);
           item.find("[data-type='ago']").attr("datetime",world.Modified);
           item.find("[data-type='thumbnail']").attr("src","https://koduworlds.azurewebsites.net/thumbnail/"+world.PrimaryId)
