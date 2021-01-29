@@ -8,6 +8,8 @@ hero_link: /downloads
 hero_link_text: Get Kodu
 ---
 
+{% include_relative featured.md %}
+
 <p>
   <img src="images/Kodu.png" align="right" hspace="20"/><br>
 
