@@ -33,6 +33,11 @@ show_sidebar: false
 }  
 </style>
 
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-timeago/1.6.7/jquery.timeago.min.js" crossorigin="anonymous"></script>
+
+{% include_relative featured.md %}
+
 <section class="section">
     <div class="container">
         <div class="columns">
@@ -91,8 +96,6 @@ show_sidebar: false
 
 </div>
 
-<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-timeago/1.6.7/jquery.timeago.min.js" crossorigin="anonymous"></script>
 
 
 <script>
@@ -193,3 +196,4 @@ $().ready(function(){
 
 });
 </script>
+
