@@ -134,9 +134,6 @@ function getWorldsPage(url)
   
   
 $().ready(function(){
-
-  initFeatured();
-  
     //console.log("here");
     $(".world-item").hide();//hide template at start.
     jQuery.timeago.settings.strings.minute = "1 minute";//remove "about" (ug)
@@ -144,10 +141,13 @@ $().ready(function(){
     jQuery.timeago.settings.strings.hours = "%d hours";
     
     let search = document.URL.split("?q=")[1]
-    if(search)
+    if(search && search.trim().length>0)
     {
         baseUrl = "https://koduworlds.azurewebsites.net/search/"+search
         $("[data-type='resulttitle']").text("Results for:"+search)
+    }else
+    {  
+      initFeatured();
     }
     let top = document.URL.split("?top=")[1]
     if(top)
