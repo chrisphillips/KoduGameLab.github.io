@@ -1,4 +1,6 @@
 <script>
   console.log("404 reporting for duty "+document.location);
-  window.location.href = "/world"
+  if(document.location.href.indexOf("/world/")>-1)
+    window.location.href = document.location.href.replace("/world/","/world#");
 </script>
+Kodu 404
