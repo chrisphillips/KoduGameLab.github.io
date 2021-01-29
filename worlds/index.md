@@ -13,6 +13,10 @@ show_sidebar: false
 .world-item .description {
   display: none;
 }
+.world-item .downloads {
+  color: blue;
+  float: right;
+}  
 .modal.world-item .description {
   display: unset;
   color: green;
@@ -63,6 +67,7 @@ show_sidebar: false
                               <p data-type='authorname' class="subtitle is-6">by Author Name</p>  
                               <p data-type='description' class="description subtitle is-6">Description</p>  
                               <div class='button is-primary'>Download</div>
+                              <p data-type='downloads' class="downloads subtitle is-6">1234</p>  
                               <p>
                                 <time data-type='ago' class="timeago title is-7 has-text-right">X days Ago</time>
                               </p>
@@ -113,6 +118,7 @@ function getWorldsPage(url)
           item.find("[data-type='worldname']").text(world.Name);
           item.find("[data-type='authorname']").text("by "+world.Creator);
           item.find("[data-type='description']").text(world.Description);
+          item.find("[data-type='downloads']").text(world.Downloads);
           item.find("[data-type='ago']").text(world.Modified);
           item.find("[data-type='ago']").attr("datetime",world.Modified);
           item.find("[data-type='thumbnail']").attr("src","https://koduworlds.azurewebsites.net/thumbnail/"+world.PrimaryId)
