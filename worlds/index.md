@@ -168,11 +168,12 @@ $().ready(function(){
     });
     
     $(".sort-button").on("click",function(e){
-      let text = e.target.html();
+      let text = $(e.target).html();
       console.log(text);
       if(text=="Top")
       {
-      
+        $(".sort-button").removeClass("is-primary")
+        $(e.target).addClass("is-primary")
       }
     });    
     
