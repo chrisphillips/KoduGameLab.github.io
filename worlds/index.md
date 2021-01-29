@@ -72,17 +72,10 @@ show_sidebar: false
                       </div>
                     </div>
                       <div class="column is-12">
-                          <p data-type='more-button' style='float:left' class="title is-3">Loading...
+                          <p data-type='more-button' id='loading-message' style='float:left' class="title is-3">Loading...
                           </p>
-                          <div style='float:right' class='button more-button is-primary'>Moar</div>
+                          <div style='float:right' class='button more-button is-primary'>Load More</div>
                       </div>              
-                    <nav class="pagination is-rounded" role="navigation" aria-label="pagination">
-                      <a class="pagination-next">Next page</a>
-                      <ul class="pagination-list" style="list-style: none;">
-                        <li><a class="pagination-link is-current" aria-label="Page 1" aria-current="page">1</a></li>
-                        <li><a class="pagination-link" aria-label="Goto page 2">2</a></li>
-                      </ul>
-                    </nav>                  
                
             </div>
         </div>
@@ -104,6 +97,12 @@ var baseUrl = "https://koduworlds.azurewebsites.net/latest"
 function getWorldsPage(url)
 {
   $.post( url, function( data ) {
+      if(data.length==0)
+      {
+        console.log("Got Zero Search Results")
+        $("#loading-message").hide();
+        $(".more-button").remove();//hack to stop auto scroll. todo. better fix.
+      }
       for(world of data)
       {
           //copy first item (template)
