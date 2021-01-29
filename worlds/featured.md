@@ -42,7 +42,9 @@
   </div>
   <!-- If we need pagination -->
   <div class="swiper-pagination"></div>
-
+  <!-- Add Arrows -->
+  <div class="swiper-button-next"></div>
+  <div class="swiper-button-prev"></div>
 </div>
 
 <script>
@@ -92,6 +94,9 @@ function getFeatured()
           modifier: 1,
           slideShadows: true,
         },
+        keyboard: {
+          enabled: true,
+        },        
         pagination: {
           el: '.swiper-pagination',
         },
