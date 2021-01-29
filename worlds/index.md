@@ -151,7 +151,7 @@ $().ready(function(){
       initFeatured();
     }
     let top = document.URL.split("?top=")[1]
-    if(top)
+    if(top && top.trim().length>0)
     {
         baseUrl = "https://koduworlds.azurewebsites.net/top"
         $("[data-type='resulttitle']").text("Top worlds")
