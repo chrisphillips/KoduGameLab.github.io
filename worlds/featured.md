@@ -54,17 +54,16 @@
 </div>
 
 <script>
-$().ready(function(){
-  
-  $(".swiper-container").hide();//hide template at start.
-  $(".swiper-slide").hide();//hide template at start.
+$(".swiper-container").hide();//hide template at start.
+$(".swiper-slide").hide();//hide template at start.
 
-  
+//$().ready(function(){
+var initFeatured=(function(){
 
 function getFeatured()
 {
   baseUrl = "https://koduworlds.azurewebsites.net/top"
-  let urlArgs= "?first="+parseInt(Math.random()*100)+"&count=6"
+  let urlArgs= "?first="+parseInt(Math.random()*100)+"&count=7"
   url=baseUrl+urlArgs
   
   $.post( url, function( data ) {
@@ -91,7 +90,7 @@ function getFeatured()
       var swiper = new Swiper('.swiper-container', {
         effect: 'coverflow',
         grabCursor: true,
-        centeredSlides: false,
+        centeredSlides: true,
         slidesPerView: 'auto',
         coverflowEffect: {
           rotate: 50,
