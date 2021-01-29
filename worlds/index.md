@@ -93,7 +93,6 @@ show_sidebar: false
 
 <script>
 
-var baseUrl = "https://koduworlds.azurewebsites.net/latest"
 function getWorldsPage(url)
 {
   console.log("getWorldsPage" + url);
@@ -140,6 +139,8 @@ $().ready(function(){
     jQuery.timeago.settings.strings.hour = "1 hour";
     jQuery.timeago.settings.strings.hours = "%d hours";
     
+    let baseUrl = "https://koduworlds.azurewebsites.net/latest"
+
     let search = document.URL.split("?q=")[1]
     if(search && search.trim().length>0)
     {
