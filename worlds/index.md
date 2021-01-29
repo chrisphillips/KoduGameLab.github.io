@@ -96,6 +96,8 @@ show_sidebar: false
 var baseUrl = "https://koduworlds.azurewebsites.net/latest"
 function getWorldsPage(url)
 {
+  console.log("getWorldsPage" + url);
+  
   $.post( url, function( data ) {
       if(data.length==0)
       {
