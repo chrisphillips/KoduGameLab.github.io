@@ -47,6 +47,8 @@
 
 <script>
 $().ready(function(){
+  
+  $(".swiper-container).hide();//hide template at start.
   $(".swiper-slide").hide();//hide template at start.
 
   
@@ -94,6 +96,9 @@ function getFeatured()
           el: '.swiper-pagination',
         },
       });
+      
+      //unhide feature container now.
+      $(".swiper-container).show();
   });
 }
 getFeatured()
