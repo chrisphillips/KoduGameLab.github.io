@@ -6,6 +6,9 @@
     width: 100%;
     padding-top: 50px;
     padding-bottom: 50px;
+  
+    //used https://www.css-gradient.com/ 
+    background: linear-gradient(to right bottom, rgb(17, 121, 245), rgb(74, 213, 133));
   }
   .swiper-slide {
     background-position: center;
