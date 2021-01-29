@@ -51,7 +51,7 @@ show_sidebar: false
                           <input class="input search" type="text" placeholder="Search" style="float:right;width:200px;margin:3px;">                        
                       </div>
                       <div class="column is-2-desktop is-4-tablet world-item">
-                        <a href="">
+                        <a data-type='worldref' href="#">
                           <div class="card">
                             <div class="card-image">
                               <figure class="image is-4by3">
@@ -109,6 +109,7 @@ function getWorldsPage(url)
           //copy first item (template)
           let item=$(".world-item").first().clone();
           //and fill it in with world data
+          item.find("[data-type='worldref']").attr("href","#"+world.PrimaryId);
           item.find("[data-type='worldname']").text(world.Name);
           item.find("[data-type='authorname']").text("by "+world.Creator);
           item.find("[data-type='description']").text(world.Description);
