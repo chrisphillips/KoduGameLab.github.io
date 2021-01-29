@@ -155,9 +155,9 @@ $().ready(function(){
     $(".search").on("input",function(){
       let filter = $(".search").val()
       console.log(filter);
-      let newPath = document.origin+document.pathName+'/?q='+filter
+      let newPath = document.location.origin+document.location.pathName+'/?q='+filter
       console.log(newPath);
-      if(document.location.indexOf("?top=1") ||document.location.indexOf("&top=1"))
+      if(document.location.search.indexOf("?top=1") ||document.location.search.indexOf("&top=1"))
       {
         newPath+="&top=1" //todo proper path appending.
       }
