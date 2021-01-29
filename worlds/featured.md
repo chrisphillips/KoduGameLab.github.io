@@ -48,7 +48,7 @@
 <script>
 $().ready(function(){
   
-  $(".swiper-container).hide();//hide template at start.
+  $(".swiper-container").hide();//hide template at start.
   $(".swiper-slide").hide();//hide template at start.
 
   
@@ -98,7 +98,7 @@ function getFeatured()
       });
       
       //unhide feature container now.
-      $(".swiper-container).show();
+      $(".swiper-container").show();
   });
 }
 getFeatured()
