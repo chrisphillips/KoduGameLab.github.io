@@ -154,6 +154,8 @@ $().ready(function(){
     //console.log("there");
     $(".modal-background").on("click",function(e){
       $(".is-active").removeClass("is-active")
+      //remove anchor (#) from url
+      history.pushState({}, "", document.location.href.split('#')[0]);
     })
     
     $(".search").on("input",function(){
