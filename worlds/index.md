@@ -134,6 +134,9 @@ function getWorldsPage(url)
   
   
 $().ready(function(){
+
+  initFeatured();
+  
     //console.log("here");
     $(".world-item").hide();//hide template at start.
     jQuery.timeago.settings.strings.minute = "1 minute";//remove "about" (ug)
