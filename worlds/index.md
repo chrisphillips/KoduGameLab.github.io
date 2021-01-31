@@ -50,9 +50,9 @@ show_sidebar: false
                       <div class="column is-12">
                           <p data-type='resulttitle' style='float: left;' class="title is-3">Latest Worlds
                           </p>
-                          <form>
-                            <div type="submit" class='button sort-button'>Top</div>
-                            <div type="submit" class='button sort-button is-primary'>Latest</div>
+                          <form id='search-form'>
+                            <button type="submit" class='button sort-button'>Top</button>
+                            <button type="submit" class='button sort-button is-primary'>Latest</button>
                             <input class="input search" type="text" placeholder="Search" style="float:right;width:200px;margin:3px;">
                           </form>                        
                       </div>
@@ -148,6 +148,11 @@ $().ready(function(){
     jQuery.timeago.settings.strings.hours = "%d hours";
     
     let baseUrl = "https://koduworlds.azurewebsites.net/latest"
+    
+    $("#search-form").on("submit"function(e){
+      console.log(e);
+      e.preventDefault();
+    });
 
     let search = document.URL.split("?q=")[1]
     if(search && search.trim().length>0)
@@ -172,7 +177,7 @@ $().ready(function(){
       history.pushState({}, "", document.location.href.split('#')[0]);
     })
     
-    $(".search").on("input",function(){
+    $(".searchxx").on("input",function(){
       let filter = $(".search").val()
       console.log(filter);
       let newPath = document.location.origin+document.location.pathname+'?q='+filter
