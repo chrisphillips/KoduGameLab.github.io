@@ -50,9 +50,11 @@ show_sidebar: false
                       <div class="column is-12">
                           <p data-type='resulttitle' style='float: left;' class="title is-3">Latest Worlds
                           </p>
-                          <div class='button sort-button'>Top</div>
-                          <div class='button sort-button is-primary'>Latest</div>
-                          <form><input class="input search" type="text" placeholder="Search" style="float:right;width:200px;margin:3px;"></form>                        
+                          <form>
+                            <div type="submit" class='button sort-button'>Top</div>
+                            <div type="submit" class='button sort-button is-primary'>Latest</div>
+                            <input class="input search" type="text" placeholder="Search" style="float:right;width:200px;margin:3px;">
+                          </form>                        
                       </div>
                       <div class="column is-2-desktop is-4-tablet world-item">
                         <a data-type='worldref' href="#">
@@ -185,19 +187,19 @@ $().ready(function(){
       }, 'Search | Kodu Worlds', newPath);
     });
     
-    $(".search").on("keyup",function(event) {
-    // Number 13 is the "Enter" key on the keyboard
-    if (event.keyCode === 13) {
-      // Cancel the default action, if needed
-      event.preventDefault();
-      // Trigger the button element with a click
-      //document.getElementById("myBtn").click();
-      window.location=document.location.href
-    }
-  });
+    $(".searchxx").on("keyup",function(event) {
+      // Number 13 is the "Enter" key on the keyboard
+      if (event.keyCode === 13) {
+        // Cancel the default action, if needed
+        event.preventDefault();
+        // Trigger the button element with a click
+        //document.getElementById("myBtn").click();
+        window.location=document.location.href
+      }
+    });
 
     
-    $(".sort-button").on("click",function(e){
+    $(".sort-buttonxx").on("click",function(e){
       let text = $(e.target).html();
       console.log(text);
       $(".sort-button").removeClass("is-primary")
