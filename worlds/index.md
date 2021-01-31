@@ -149,7 +149,7 @@ $().ready(function(){
     
     let baseUrl = "https://koduworlds.azurewebsites.net/latest"
     
-    $("#search-form").on("submit"function(e){
+    $("#search-form").submit(function(e){
       console.log(e);
       e.preventDefault();
     });
