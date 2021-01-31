@@ -254,7 +254,7 @@ $().ready(function(){
       }
     });  
   
-    //getWorldsPage()
+    getWorldsPage()
 
 });
 </script>
