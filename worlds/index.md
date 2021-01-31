@@ -50,11 +50,9 @@ show_sidebar: false
                       <div class="column is-12">
                           <p data-type='resulttitle' style='float: left;' class="title is-3">Latest Worlds
                           </p>
-                          <form id='search-form'>
-                            <button id="top-button" class='button sort-button'>Top</button>
-                            <button id="latest-button" class='button sort-button'>Latest</button>
-                            <input class="input search" type="text" placeholder="Search" style="float:right;width:200px;margin:3px;">
-                          </form>                        
+                          <button id="top-button" class='button sort-button'>Top</button>
+                          <button id="latest-button" class='button sort-button'>Latest</button>
+                          <input class="input search" type="text" placeholder="Search" style="float:right;width:200px;margin:3px;">
                       </div>
                       <div class="column is-2-desktop is-4-tablet world-item">
                         <a data-type='worldref' href="#">
@@ -156,11 +154,6 @@ $().ready(function(){
         params[key] = value;
       }
     );
-
-    $("#search-form").submit(function(e){
-      console.log(e);
-      e.preventDefault();
-    });
 
     let search = params["q"]
     if(search && search.trim().length>0)
