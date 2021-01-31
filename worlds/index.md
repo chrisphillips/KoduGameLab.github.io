@@ -98,45 +98,7 @@ show_sidebar: false
 
 <script>
 
-function getWorldsPage(url)
-{
-  console.log("getWorldsPage" + url);
-  
-  $.post( url, function( data ) {
-      if(data.length==0)
-      {
-        console.log("Got Zero Search Results")
-        $("#loading-message").hide();
-        $(".more-button").remove();//hack to stop auto scroll. todo. better fix.
-      }
-      for(world of data)
-      {
-          //copy first item (template)
-          let item=$(".world-item").first().clone();
-          //and fill it in with world data
-          item.find("[data-type='worldref']").attr("href","#"+world.PrimaryId);
-          item.find("[data-type='worldname']").text(world.Name);
-          item.find("[data-type='authorname']").text("by "+world.Creator);
-          item.find("[data-type='description']").text(world.Description);
-          item.find("[data-type='downloads']").text(world.Downloads+"⇩" ); /* &#8681 */
-          item.find("[data-type='ago']").text(world.Modified);
-          item.find("[data-type='ago']").attr("datetime",world.Modified);
-          item.find("[data-type='thumbnail']").attr("src","https://koduworlds.azurewebsites.net/thumbnail/"+world.PrimaryId)
-          item.show();//defaults to hidden so show.
 
-          item.on("click",function(e){
-              console.log(e.currentTarget)
-              //$(".world-item").removeClass("zoom")
-              $(".modal").addClass("is-active")
-              $(".modal-card").html($(e.currentTarget).html())
-          })
-
-          $(".world-container").append(item );
-      }
-      $(".timeago").timeago();
-  });
-}  
-  
   
 $().ready(function(){
     //console.log("here");
@@ -163,6 +125,7 @@ $().ready(function(){
         $(".search").val(search)
     }else
     {  
+      search=""
       initFeatured();
     }
     
@@ -172,14 +135,12 @@ $().ready(function(){
       
     if(top>0)
     {
-        baseUrl = "https://koduworlds.azurewebsites.net/top"
         $("[data-type='resulttitle']").text("Top worlds")
         $("#top-button").addClass("is-primary");
         $("#latest-button").on("click",function(){
           doNav($(".search").val(),0)
         });
     }else{
-        baseUrl = "https://koduworlds.azurewebsites.net/latest"
         $("[data-type='resulttitle']").text("Latest worlds")
         $("#latest-button").addClass("is-primary");
         $("#top-button").on("click",function(){
@@ -224,10 +185,64 @@ $().ready(function(){
     
     let curFirst=0;
     let curCount=6*6;//six rows of six each
-    $(".more-button").on("click",function(){
-      let urlArgs= "?first="+curFirst+"&count="+curCount
-      getWorldsPage(baseUrl+urlArgs)
+    let curSearch=search;
+
+
+    var fetchingPage=false;
+    function getWorldsPage()
+    {
+      if(fetchingPage)
+        return;
+      fetchingPage=true;
+
+      let urlArgs= "?first="+curFirst+"&count="+curCount+"&sortBy="+top
+      baseUrl = "https://koduworlds.azurewebsites.net/search/"+curSearch
+      let url=baseUrl+urlArgs
       curFirst+=curCount;
+
+      console.log("getWorldsPage" + url);
+
+      $.post( url, function( data ) {
+          if(data.length==0)
+          {
+            console.log("Got Zero Search Results")
+            $("#loading-message").hide();
+            $(".more-button").remove();//hack to stop auto scroll. todo. better fix.
+          }
+          for(world of data)
+          {
+              //copy first item (template)
+              let item=$(".world-item").first().clone();
+              //and fill it in with world data
+              item.find("[data-type='worldref']").attr("href","#"+world.PrimaryId);
+              item.find("[data-type='worldname']").text(world.Name);
+              item.find("[data-type='authorname']").text("by "+world.Creator);
+              item.find("[data-type='description']").text(world.Description);
+              item.find("[data-type='downloads']").text(world.Downloads+"⇩" ); /* &#8681 */
+              item.find("[data-type='ago']").text(world.Modified);
+              item.find("[data-type='ago']").attr("datetime",world.Modified);
+              item.find("[data-type='thumbnail']").attr("src","https://koduworlds.azurewebsites.net/thumbnail/"+world.PrimaryId)
+              item.show();//defaults to hidden so show.
+
+              item.on("click",function(e){
+                  console.log(e.currentTarget)
+                  //$(".world-item").removeClass("zoom")
+                  $(".modal").addClass("is-active")
+                  $(".modal-card").html($(e.currentTarget).html())
+              })
+
+              $(".world-container").append(item );
+          }
+          $(".timeago").timeago();
+          fetchingPage=false;
+      });
+    } //end getWorldPage() 
+  
+
+
+
+    $(".more-button").on("click",function(){
+      getWorldsPage()
     });  
     
     //Infinite Scroll
@@ -239,10 +254,7 @@ $().ready(function(){
       }
     });  
   
-    let urlArgs= "?first="+curFirst+"&count="+curCount+"&sortBy="+top
-    baseUrl = "https://koduworlds.azurewebsites.net/search/"+search
-    getWorldsPage(baseUrl+urlArgs)
-    curFirst+=curCount;
+    //getWorldsPage()
 
 });
 </script>
