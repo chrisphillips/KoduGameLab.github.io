@@ -52,7 +52,7 @@ show_sidebar: false
                           </p>
                           <div class='button sort-button'>Top</div>
                           <div class='button sort-button is-primary'>Latest</div>
-                          <input class="input search" type="text" placeholder="Search" style="float:right;width:200px;margin:3px;">                        
+                          <form><input class="input search" type="text" placeholder="Search" style="float:right;width:200px;margin:3px;"></form>                        
                       </div>
                       <div class="column is-2-desktop is-4-tablet world-item">
                         <a data-type='worldref' href="#">
