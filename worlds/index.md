@@ -179,14 +179,14 @@ $().ready(function(){
         baseUrl = "https://koduworlds.azurewebsites.net/top"
         $("[data-type='resulttitle']").text("Top worlds")
         $("#top-button").addClass("is-primary");
-        $("#latest-button").on("click"function(){
+        $("#latest-button").on("click",function(){
           doNav($(".search").val(),0)
         });
     }else{
         baseUrl = "https://koduworlds.azurewebsites.net/latest"
         $("[data-type='resulttitle']").text("Latest worlds")
         $("#latest-button").addClass("is-primary");
-        $("#top-button").on("click"function(){
+        $("#top-button").on("click",function(){
           doNav($(".search").val(),1)
         });
     }
