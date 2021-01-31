@@ -51,8 +51,8 @@ show_sidebar: false
                           <p data-type='resulttitle' style='float: left;' class="title is-3">Latest Worlds
                           </p>
                           <form id='search-form'>
-                            <button type="submit" #id='top-button' class='button sort-button'>Top</button>
-                            <button type="submit" #id='latest-button' class='button sort-button'>Latest</button>
+                            <button type="submit" id="top-button" class='button sort-button'>Top</button>
+                            <button type="submit" id="latest-button" class='button sort-button'>Latest</button>
                             <input class="input search" type="text" placeholder="Search" style="float:right;width:200px;margin:3px;">
                           </form>                        
                       </div>
