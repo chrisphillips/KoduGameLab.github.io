@@ -51,8 +51,8 @@ show_sidebar: false
                           <p data-type='resulttitle' style='float: left;' class="title is-3">Latest Worlds
                           </p>
                           <form id='search-form'>
-                            <button type="submit" class='button sort-button'>Top</button>
-                            <button type="submit" class='button sort-button'>Latest</button>
+                            <button type="submit" #id='top-button' class='button sort-button'>Top</button>
+                            <button type="submit" #id='latest-button' class='button sort-button'>Latest</button>
                             <input class="input search" type="text" placeholder="Search" style="float:right;width:200px;margin:3px;">
                           </form>                        
                       </div>
@@ -178,11 +178,11 @@ $().ready(function(){
     {
         baseUrl = "https://koduworlds.azurewebsites.net/top"
         $("[data-type='resulttitle']").text("Top worlds")
-        $(".sort-button")[0].addClass("is-primary");//todo.remove [0] hack.
+        $("#top-button").addClass("is-primary");//todo.remove [0] hack.
     }else{
         baseUrl = "https://koduworlds.azurewebsites.net/latest"
         $("[data-type='resulttitle']").text("Latest worlds")
-        $(".sort-button")[1].addClass("is-primary");
+        $("#latest-button").addClass("is-primary");
     }
     
     
