@@ -194,22 +194,7 @@ $().ready(function(){
       //remove anchor (#) from url
       history.pushState({}, "", document.location.href.split('#')[0]);
     })
-    
-    $(".searchxx").on("input",function(){
-      let filter = $(".search").val()
-      console.log(filter);
-      let newPath = document.location.origin+document.location.pathname+'?q='+filter
-      console.log(newPath);
-      if(document.location.search.indexOf("?top=1")>-1 ||document.location.search.indexOf("&top=1")>-1)
-      {
-        newPath+="&top=1" //todo proper path appending.
-      }
-
-      window.history.pushState({
-          id: 'search'
-      }, 'Search | Kodu Worlds', newPath);
-    });
-    
+    //handle Enter in search box.
     $(".search").on("keyup",function(event) {
       if (event.keyCode === 13) {
         event.preventDefault();
@@ -228,6 +213,7 @@ $().ready(function(){
       else
         sortBy=0;
 
+      //todo? don't include top=0 since it is default
       newPath+='?top='+sortBy  
       if(filter.length)
         newPath+='&q='+filter  
@@ -235,18 +221,6 @@ $().ready(function(){
       console.log("newPath");
       window.location=(newPath)
     }
-    
-    $(".sort-buttonxx").on("click",function(e){
-      let text = $(e.target).html();
-      console.log(text);
-      if(text=="Top")
-      {
-        doNav($(".search").val(),1)
-      }else{
-        doNav($(".search").val(),0)
-      }
-      
-    });    
     
     let curFirst=0;
     let curCount=6*6;//six rows of six each
@@ -265,7 +239,8 @@ $().ready(function(){
       }
     });  
   
-    let urlArgs= "?first="+curFirst+"&count="+curCount
+    let urlArgs= "?first="+curFirst+"&count="+curCount+"&sortBy="+top
+    baseUrl = "https://koduworlds.azurewebsites.net/search/"+search
     getWorldsPage(baseUrl+urlArgs)
     curFirst+=curCount;
 
