@@ -52,7 +52,7 @@ show_sidebar: false
                           </p>
                           <form id='search-form'>
                             <button type="submit" class='button sort-button'>Top</button>
-                            <button type="submit" class='button sort-button is-primary'>Latest</button>
+                            <button type="submit" class='button sort-button'>Latest</button>
                             <input class="input search" type="text" placeholder="Search" style="float:right;width:200px;margin:3px;">
                           </form>                        
                       </div>
@@ -149,12 +149,20 @@ $().ready(function(){
     
     let baseUrl = "https://koduworlds.azurewebsites.net/latest"
     
+    //get url params
+    var params={};
+    window.location.search
+      .replace(/[?&]+([^=&]+)=([^&]*)/gi, function(str,key,value) {
+        params[key] = value;
+      }
+    );
+
     $("#search-form").submit(function(e){
       console.log(e);
       e.preventDefault();
     });
 
-    let search = document.URL.split("?q=")[1]
+    let search = params["q"]
     if(search && search.trim().length>0)
     {
         baseUrl = "https://koduworlds.azurewebsites.net/search/"+search
@@ -164,12 +172,20 @@ $().ready(function(){
     {  
       initFeatured();
     }
-    let top = document.URL.split("?top=")[1]
+    
+    let top = params["top"]
     if(top && top.trim().length>0)
     {
         baseUrl = "https://koduworlds.azurewebsites.net/top"
         $("[data-type='resulttitle']").text("Top worlds")
-    }    
+        $(".sort-button")[0].addClass("is-primary");//todo.remove [0] hack.
+    }else{
+        baseUrl = "https://koduworlds.azurewebsites.net/latest"
+        $("[data-type='resulttitle']").text("Latest worlds")
+        $(".sort-button")[1].addClass("is-primary");
+    }
+    
+    
     //console.log("there");
     $(".modal-background").on("click",function(e){
       $(".is-active").removeClass("is-active")
