@@ -51,8 +51,8 @@ show_sidebar: false
                           <p data-type='resulttitle' style='float: left;' class="title is-3">Latest Worlds
                           </p>
                           <form id='search-form'>
-                            <button type="submit" id="top-button" class='button sort-button'>Top</button>
-                            <button type="submit" id="latest-button" class='button sort-button'>Latest</button>
+                            <button id="top-button" class='button sort-button'>Top</button>
+                            <button id="latest-button" class='button sort-button'>Latest</button>
                             <input class="input search" type="text" placeholder="Search" style="float:right;width:200px;margin:3px;">
                           </form>                        
                       </div>
@@ -178,11 +178,17 @@ $().ready(function(){
     {
         baseUrl = "https://koduworlds.azurewebsites.net/top"
         $("[data-type='resulttitle']").text("Top worlds")
-        $("#top-button").addClass("is-primary");//todo.remove [0] hack.
+        $("#top-button").addClass("is-primary");
+        $("#latest-button").on("click"function(){
+          doNav($(".search").val(),0)
+        });
     }else{
         baseUrl = "https://koduworlds.azurewebsites.net/latest"
         $("[data-type='resulttitle']").text("Latest worlds")
         $("#latest-button").addClass("is-primary");
+        $("#top-button").on("click"function(){
+          doNav($(".search").val(),1)
+        });
     }
     
     
@@ -208,33 +214,42 @@ $().ready(function(){
       }, 'Search | Kodu Worlds', newPath);
     });
     
-    $(".searchxx").on("keyup",function(event) {
-      // Number 13 is the "Enter" key on the keyboard
+    $(".search").on("keyup",function(event) {
       if (event.keyCode === 13) {
-        // Cancel the default action, if needed
         event.preventDefault();
-        // Trigger the button element with a click
-        //document.getElementById("myBtn").click();
+        doNav($(".search").val(),1)
         window.location=document.location.href
       }
     });
 
+    function doNav(search,sortBy)
+    {
+      let newPath = document.location.origin+document.location.pathname
+      let filter = search.trim();
+      
+      if(sortBy && sortBy!=0)
+        sortBy=1;
+      else
+        sortBy=0;
+
+      newPath+='?top='+sortBy  
+      if(filter.length)
+        newPath+='&q='+filter  
+        
+      console.log("newPath");
+      window.location=(newPath)
+    }
     
     $(".sort-buttonxx").on("click",function(e){
       let text = $(e.target).html();
       console.log(text);
-      $(".sort-button").removeClass("is-primary")
-      $(e.target).addClass("is-primary")
       if(text=="Top")
       {
-            let newPath = document.location.origin+document.location.pathname
-            newPath+="?top=1"
-            let filter = $(".search").val().trim();
-            if(filter.length)
-              newPath+='&q='+filter
-            console.log("newPath");
-            window.location=(newPath)
+        doNav($(".search").val(),1)
+      }else{
+        doNav($(".search").val(),0)
       }
+      
     });    
     
     let curFirst=0;
