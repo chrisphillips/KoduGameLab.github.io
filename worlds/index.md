@@ -173,8 +173,11 @@ $().ready(function(){
       initFeatured();
     }
     
-    let top = params["top"]
-    if(top && top.trim().length>0)
+    let top = parseInt(params["top"])
+    if(!top)
+      top=0;
+      
+    if(top>0)
     {
         baseUrl = "https://koduworlds.azurewebsites.net/top"
         $("[data-type='resulttitle']").text("Top worlds")
@@ -217,8 +220,8 @@ $().ready(function(){
     $(".search").on("keyup",function(event) {
       if (event.keyCode === 13) {
         event.preventDefault();
-        doNav($(".search").val(),1)
-        window.location=document.location.href
+        doNav($(".search").val(),top)
+        //window.location=document.location.href
       }
     });
 
