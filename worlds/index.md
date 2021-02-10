@@ -98,6 +98,35 @@ show_sidebar: false
 
 <script>
 
+function hexToBase64(str) {
+  return btoa(String.fromCharCode.apply(null,
+    str.replace(/\r|\n/g, "").replace(/([\da-fA-F]{2}) ?/g, "0x$1 ").replace(/ +$/, "").split(" "))
+  );
+}
+
+function base64ToHex(str) {
+  for (var i = 0, bin = atob(str.replace(/[ \r\n]+$/, "")), hex = []; i < bin.length; ++i) {
+    var tmp = bin.charCodeAt(i).toString(16);
+    if (tmp.length === 1) tmp = "0" + tmp;
+    hex[hex.length] = tmp;
+  }
+  return hex.join("");
+}
+
+function decodeGuid(encodedGuid)
+{
+      //"dTZs7fWnRkygPa6j0RjR0g=="
+      var decoded = base64ToHex(encodedGuid);
+      document.getElementById('out').innerHTML = decoded;
+
+      var chunks = [];
+      chunks.push( decoded.substring(0, 8) );
+      chunks.push( decoded.substring(8, 12) );
+      chunks.push( decoded.substring(12, 16) );
+      chunks.push( decoded.substring(16, 20) );
+      chunks.push( decoded.substring(20) );
+      decoded = chunks.join("-");
+}
 
   
 $().ready(function(){
@@ -152,7 +181,14 @@ $().ready(function(){
     //if a world id was specified fetch that world meta and display in modal
     if(window.location.hash){
       let guid = window.location.hash.slice(1)//slice removes # at start.
-      if(guid.length==36){//minimal sanity check. 36 = len of guid+#
+
+      //handle base64 guids
+      if(guid.length==24 && guid[22]=='=' && guid[23]=='=') //base64 guid?
+      {
+        guid=decodeGuid(guid)
+      }
+
+      if(guid.length==36){//minimal sanity check. 36 = len of guid
         let dataUrl = "https://koduworlds.azurewebsites.net/world/"+guid
         //todo validate guid.
         $.get( dataUrl, function( world ) {
