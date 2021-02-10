@@ -107,8 +107,6 @@ $().ready(function(){
     jQuery.timeago.settings.strings.hour = "1 hour";
     jQuery.timeago.settings.strings.hours = "%d hours";
     
-    let baseUrl = "https://koduworlds.azurewebsites.net/latest"
-    
     //get url params
     var params={};
     window.location.search
@@ -117,10 +115,11 @@ $().ready(function(){
       }
     );
 
+    //q in url is search query (if any)
     let search = params["q"]
     if(search && search.trim().length>0)
     {
-        baseUrl = "https://koduworlds.azurewebsites.net/search/"+search
+        //update section title and search bar
         $("[data-type='resulttitle']").text("Results for:"+search)
         $(".search").val(search)
     }else
@@ -129,41 +128,92 @@ $().ready(function(){
       initFeatured();
     }
     
+    //get top flag from url
     let top = parseInt(params["top"])
     if(!top)
       top=0;
-      
+
+    //setup page for top or latest  
     if(top>0)
     {
         $("[data-type='resulttitle']").text("Top worlds")
         $("#top-button").addClass("is-primary");
         $("#latest-button").on("click",function(){
-          doNav($(".search").val(),0)
+          doNav($(".search").val(),0)//toggle top/latest
         });
     }else{
         $("[data-type='resulttitle']").text("Latest worlds")
         $("#latest-button").addClass("is-primary");
         $("#top-button").on("click",function(){
-          doNav($(".search").val(),1)
+          doNav($(".search").val(),1)//toggle top/latest
         });
     }
+
+    //if a world id was specified fetch that world meta and display in modal
+    if(window.location.hash){
+      let guid = window.location.hash.slice(1)//slice removes # at start.
+      if(guid.length==36)//minimal sanity check. 36 = len of guid+#
+        let dataUrl = "https://koduworlds.azurewebsites.net/world/"+guid
+        //todo validate guid.
+        $.get( dataUrl, function( data ) {
+            if(data.length==0)
+            {
+              //console.log("Got Zero Search Results")
+            }
+            for(world of data)
+            {
+                //copy first item (template)
+                let item=$(".world-item").first().clone();
+                //and fill it in with world data
+                item.find("[data-type='worldref']").attr("href","#"+world.PrimaryId);
+                item.find("[data-type='worldname']").text(world.Name);
+                item.find("[data-type='authorname']").text("by "+world.Creator);
+                item.find("[data-type='description']").text(world.Description);
+                item.find("[data-type='downloads']").text(world.Downloads+"⇩" ); /* &#8681 */
+                item.find("[data-type='ago']").text(world.Modified);
+                item.find("[data-type='ago']").attr("datetime",world.Modified);
+                item.find("[data-type='thumbnail']").attr("src","https://koduworlds.azurewebsites.net/thumbnail/"+world.PrimaryId)
+                item.show();//defaults to hidden so show.
+                
+                item.on("click",function(e){
+                    console.log(e.currentTarget)
+                    //$(".world-item").removeClass("zoom")
+                    $(".modal").addClass("is-active")
+                    $(".modal-card").html($(e.currentTarget).html())
+                })
+                //todo. maybe hide.
+                $(".world-container").append(item );
+
+                //Immediately pop up in a modal
+                item.click();
+                //$(".modal").addClass("is-active")
+                //$(".modal-card").html($(e.currentTarget).html())
+
+
+
+            }
+            $(".timeago").timeago();
+            fetchingPage=false;
+        });
+      }
+    }
     
-    
-    //console.log("there");
+    //handle close modal on background click
     $(".modal-background").on("click",function(e){
       $(".is-active").removeClass("is-active")
       //remove anchor (#) from url
       history.pushState({}, "", document.location.href.split('#')[0]);
     })
+
     //handle Enter in search box.
     $(".search").on("keyup",function(event) {
       if (event.keyCode === 13) {
         event.preventDefault();
         doNav($(".search").val(),top)
-        //window.location=document.location.href
       }
     });
 
+    //handle navigation
     function doNav(search,sortBy)
     {
       let newPath = document.location.origin+document.location.pathname
@@ -183,10 +233,10 @@ $().ready(function(){
       window.location=(newPath)
     }
     
+    //pageing for worlds results
     let curFirst=0;
     let curCount=6*6;//six rows of six each
     let curSearch=search;
-
 
     var fetchingPage=false;
     function getWorldsPage()
@@ -195,12 +245,13 @@ $().ready(function(){
         return;
       fetchingPage=true;
 
+      //todo change to post search api
       let urlArgs= "?first="+curFirst+"&count="+curCount+"&sortBy="+top
       baseUrl = "https://koduworlds.azurewebsites.net/search/"+curSearch
       let url=baseUrl+urlArgs
       curFirst+=curCount;
 
-      console.log("getWorldsPage" + url);
+      console.log("getWorldsPage:" + url);
 
       $.get( url, function( data ) {
           if(data.length==0)
@@ -240,7 +291,7 @@ $().ready(function(){
   
 
 
-
+    //dummy button used by infinite scroll
     $(".more-button").on("click",function(){
       getWorldsPage()
     });  
@@ -254,6 +305,7 @@ $().ready(function(){
       }
     });  
   
+    //Start by getting first page of results
     getWorldsPage()
 
 });
