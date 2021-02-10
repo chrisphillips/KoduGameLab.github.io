@@ -152,7 +152,7 @@ $().ready(function(){
     //if a world id was specified fetch that world meta and display in modal
     if(window.location.hash){
       let guid = window.location.hash.slice(1)//slice removes # at start.
-      if(guid.length==36)//minimal sanity check. 36 = len of guid+#
+      if(guid.length==36){//minimal sanity check. 36 = len of guid+#
         let dataUrl = "https://koduworlds.azurewebsites.net/world/"+guid
         //todo validate guid.
         $.get( dataUrl, function( data ) {
