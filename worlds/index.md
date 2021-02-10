@@ -117,7 +117,6 @@ function decodeGuid(encodedGuid)
 {
       //"dTZs7fWnRkygPa6j0RjR0g=="
       var decoded = base64ToHex(encodedGuid);
-      document.getElementById('out').innerHTML = decoded;
 
       var chunks = [];
       chunks.push( decoded.substring(0, 8) );
@@ -126,6 +125,7 @@ function decodeGuid(encodedGuid)
       chunks.push( decoded.substring(16, 20) );
       chunks.push( decoded.substring(20) );
       decoded = chunks.join("-");
+      return (decoded)
 }
 
   
