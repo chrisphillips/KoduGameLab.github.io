@@ -155,45 +155,39 @@ $().ready(function(){
       if(guid.length==36){//minimal sanity check. 36 = len of guid+#
         let dataUrl = "https://koduworlds.azurewebsites.net/world/"+guid
         //todo validate guid.
-        $.get( dataUrl, function( data ) {
-            if(data.length==0)
+        $.get( dataUrl, function( world ) {
+            //todo handle error 
+            //console.log("Got Zero Search Results")
+            if(world)
             {
-              //console.log("Got Zero Search Results")
+              //copy first item (template)
+              let item=$(".world-item").first().clone();
+              //and fill it in with world data
+              item.find("[data-type='worldref']").attr("href","#"+world.PrimaryId);
+              item.find("[data-type='worldname']").text(world.Name);
+              item.find("[data-type='authorname']").text("by "+world.Creator);
+              item.find("[data-type='description']").text(world.Description);
+              item.find("[data-type='downloads']").text(world.Downloads+"⇩" ); /* &#8681 */
+              item.find("[data-type='ago']").text(world.Modified);
+              item.find("[data-type='ago']").attr("datetime",world.Modified);
+              item.find("[data-type='thumbnail']").attr("src","https://koduworlds.azurewebsites.net/thumbnail/"+world.PrimaryId)
+              item.show();//defaults to hidden so show.
+              
+              item.on("click",function(e){
+                  console.log(e.currentTarget)
+                  //$(".world-item").removeClass("zoom")
+                  $(".modal").addClass("is-active")
+                  $(".modal-card").html($(e.currentTarget).html())
+              })
+              //todo. maybe hide.
+              $(".world-container").append(item );
+
+              //Immediately pop up in a modal
+              item.click();
+              //$(".modal").addClass("is-active")
+              //$(".modal-card").html($(e.currentTarget).html())
             }
-            for(world of data)
-            {
-                //copy first item (template)
-                let item=$(".world-item").first().clone();
-                //and fill it in with world data
-                item.find("[data-type='worldref']").attr("href","#"+world.PrimaryId);
-                item.find("[data-type='worldname']").text(world.Name);
-                item.find("[data-type='authorname']").text("by "+world.Creator);
-                item.find("[data-type='description']").text(world.Description);
-                item.find("[data-type='downloads']").text(world.Downloads+"⇩" ); /* &#8681 */
-                item.find("[data-type='ago']").text(world.Modified);
-                item.find("[data-type='ago']").attr("datetime",world.Modified);
-                item.find("[data-type='thumbnail']").attr("src","https://koduworlds.azurewebsites.net/thumbnail/"+world.PrimaryId)
-                item.show();//defaults to hidden so show.
-                
-                item.on("click",function(e){
-                    console.log(e.currentTarget)
-                    //$(".world-item").removeClass("zoom")
-                    $(".modal").addClass("is-active")
-                    $(".modal-card").html($(e.currentTarget).html())
-                })
-                //todo. maybe hide.
-                $(".world-container").append(item );
 
-                //Immediately pop up in a modal
-                item.click();
-                //$(".modal").addClass("is-active")
-                //$(".modal-card").html($(e.currentTarget).html())
-
-
-
-            }
-            $(".timeago").timeago();
-            fetchingPage=false;
         });
       }
     }
