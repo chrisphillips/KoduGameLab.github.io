@@ -202,7 +202,7 @@ $().ready(function(){
 
       console.log("getWorldsPage" + url);
 
-      $.post( url, function( data ) {
+      $.get( url, function( data ) {
           if(data.length==0)
           {
             console.log("Got Zero Search Results")
