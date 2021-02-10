@@ -74,7 +74,7 @@ function getFeatured()
           //and fill it in with world data
           item.find("[data-type='worldname']").text(world.Name);
           item.find("[data-type='authorname']").text("by "+world.Creator);
-          item.find("[data-type='thumbnail']").attr("src","https://koduworlds.azurewebsites.net/thumbnail/"+world.PrimaryId)
+          item.find("[data-type='thumbnail']").attr("src","https://koduworlds.azurewebsites.net/thumbnail/"+world.WorldId)
           item.show();//defaults to hidden so show.
 
           item.on("click",function(e){
