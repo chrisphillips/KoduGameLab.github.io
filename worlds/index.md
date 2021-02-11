@@ -66,7 +66,7 @@ show_sidebar: false
                               <p data-type='worldname' class="title is-6">World Name</p>
                               <p data-type='authorname' class="subtitle is-6">by Author Name</p>  
                               <p data-type='description' class="description subtitle is-6">Description</p>  
-                              <div class='button is-primary'>Download</div>
+                              <a data-type='download-link' class='button is-primary'>Download</a>
                               <p data-type='downloads' class="downloads subtitle is-6">1234</p>  
                               <p>
                                 <time data-type='ago' class="timeago title is-7 has-text-right">X days Ago</time>
@@ -207,6 +207,7 @@ $().ready(function(){
               item.find("[data-type='ago']").text(world.Modified);
               item.find("[data-type='ago']").attr("datetime",world.Modified);
               item.find("[data-type='thumbnail']").attr("src","https://koduworlds.azurewebsites.net/thumbnail/"+world.WorldId)
+              item.find("[data-type='download-link']").attr("href","https://koduworlds.azurewebsites.net/download/"+world.WorldId)
               item.show();//defaults to hidden so show.
               
               item.on("click",function(e){
@@ -215,6 +216,7 @@ $().ready(function(){
                   $(".modal").addClass("is-active")
                   $(".modal-card").html($(e.currentTarget).html())
               })
+
               //todo. maybe hide.
               $(".world-container").append(item );
 
