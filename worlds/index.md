@@ -305,6 +305,8 @@ $().ready(function(){
               item.find("[data-type='ago']").text(world.Modified);
               item.find("[data-type='ago']").attr("datetime",world.Modified);
               item.find("[data-type='thumbnail']").attr("src","https://koduworlds.azurewebsites.net/thumbnail/"+world.WorldId)
+              item.find("[data-type='download-link']").attr("href","https://koduworlds.azurewebsites.net/download/"+world.WorldId)
+
               item.show();//defaults to hidden so show.
 
               item.on("click",function(e){
