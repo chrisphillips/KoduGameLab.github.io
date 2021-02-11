@@ -265,6 +265,49 @@ $().ready(function(){
       window.location=(newPath)
     }
     
+    function createDotKoduFilename(levelTitle, levelCreator)
+        {
+            // Clean up the title and creator if needed
+            let levelTitle = levelTitle.trim();
+            if (levelTitle=="")
+                levelTitle = "Level";
+            else if (levelTitle.length > 32)
+            {
+                levelTitle = levelTitle.substring(0, 32);
+                levelTitle = levelTitle.trim();
+            }
+
+            let levelCreator = levelCreator.trim();
+            if (levelCreator=="")
+                levelCreator = "Unknown";
+            else if (levelCreator.length > 32)
+            {
+                levelCreator = levelCreator.substring(0, 32);
+                levelCreator = levelCreator.trim();
+            }
+
+            // Get rid of invalid characters
+            let illegalRe = /[\/\?<>\\:\*\|":]/g;
+            let controlRe = /[\x00-\x1f\x80-\x9f]/g;
+            let reservedRe = /^\.+$/;
+            let windowsReservedRe = /^(con|prn|aux|nul|com[0-9]|lpt[0-9])(\..*)?$/i;
+
+            function sanitize(input, replacement) {
+              let sanitized = input
+                .replace(illegalRe, replacement)
+                .replace(controlRe, replacement)
+                .replace(reservedRe, replacement)
+                .replace(windowsReservedRe, replacement);
+              return sanitized;
+            }
+            let newName = levelTitle+", by "+levelCreator;
+            newName=sanitize(newName,"-")+".kodu";
+            // Get rid of invalid characters
+            return(newName)
+
+        }
+
+
     //pageing for worlds results
     let curFirst=0;
     let curCount=6*6;//six rows of six each
@@ -307,7 +350,7 @@ $().ready(function(){
               item.find("[data-type='thumbnail']").attr("src","https://koduworlds.azurewebsites.net/thumbnail/"+world.WorldId)
               item.find("[data-type='download-link']").attr("href","https://koduworlds.azurewebsites.net/download/"+world.WorldId)
 
-              item.find("[data-type='download-link']").attr("download",+world.Name+".kodu")
+              item.find("[data-type='download-link']").attr("download",+createDotKoduFilename(world.Name,world.Creator))
 
               item.show();//defaults to hidden so show.
 
