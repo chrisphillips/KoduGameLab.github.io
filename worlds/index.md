@@ -350,7 +350,7 @@ $().ready(function(){
               item.find("[data-type='thumbnail']").attr("src","https://koduworlds.azurewebsites.net/thumbnail/"+world.WorldId)
               item.find("[data-type='download-link']").attr("href","https://koduworlds.azurewebsites.net/download/"+world.WorldId)
 
-              item.find("[data-type='download-link']").attr("download",+createDotKoduFilename(world.Name,world.Creator))
+              item.find("[data-type='download-link']").attr("download",createDotKoduFilename(world.Name,world.Creator))
 
               item.show();//defaults to hidden so show.
 
