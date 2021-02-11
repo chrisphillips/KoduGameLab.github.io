@@ -304,7 +304,7 @@ $().ready(function(){
               return sanitized;
             }
             let newName = levelTitle+", by "+levelCreator;
-            newName=sanitize(newName,"-")+".kodu";
+            newName=sanitize(newName,"-");//+".kodu";//todo is this the right way to handle
             // Get rid of invalid characters
             return(newName)
 
