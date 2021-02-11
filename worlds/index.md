@@ -268,7 +268,7 @@ $().ready(function(){
     function createDotKoduFilename(levelTitle, levelCreator)
         {
             // Clean up the title and creator if needed
-            let levelTitle = levelTitle.trim();
+            levelTitle = levelTitle.trim();
             if (levelTitle=="")
                 levelTitle = "Level";
             else if (levelTitle.length > 32)
@@ -277,7 +277,7 @@ $().ready(function(){
                 levelTitle = levelTitle.trim();
             }
 
-            let levelCreator = levelCreator.trim();
+            levelCreator = levelCreator.trim();
             if (levelCreator=="")
                 levelCreator = "Unknown";
             else if (levelCreator.length > 32)
