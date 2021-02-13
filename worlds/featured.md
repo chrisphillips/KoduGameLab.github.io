@@ -66,7 +66,7 @@ function getFeatured()
   let urlArgs= "?first="+parseInt(Math.random()*100)+"&count=7&sortBy=downloads"
   url=baseUrl+urlArgs
   
-  $.post( url, function( data ) {
+  $.get( url, function( data ) {
       for(world of data)
       {
           //copy first item (template)
