@@ -146,7 +146,7 @@ function decodeGuid(encodedGuid)
       decoded = chunks.join("-");
       return (decoded)
 }
-
+//TODO. Page caching may not be working right!!
   
 $().ready(function(){
     //console.log("here");
@@ -172,15 +172,13 @@ $().ready(function(){
         $(".search").val(search)
     }else
     {  
-      search=""
-      initFeatured();
+      search=""//Make sure str is blank
     }
-    
-    // //get top flag from url
-    // let top = parseInt(params["top"])
-    // if(!top)
-    //   top=0;
 
+    //Show featured if not doing any sort of query
+    if(window.location.search=="")
+      initFeatured();
+    
     let sortBy=params["sortBy"]
     if(!sortBy)
       sortBy='date';  //by default 
