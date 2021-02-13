@@ -157,24 +157,31 @@ $().ready(function(){
       initFeatured();
     }
     
-    //get top flag from url
-    let top = parseInt(params["top"])
-    if(!top)
-      top=0;
+    // //get top flag from url
+    // let top = parseInt(params["top"])
+    // if(!top)
+    //   top=0;
+
+    let sortBy=params["sortBy"]
+    if(!sortBy)
+      sortBy='date';
+    let range=params["range"]
+    if(!range)
+      range='all';
 
     //setup page for top or latest  
-    if(top>0)
+    if(sortBy=='date')
     {
-        $("[data-type='resulttitle']").text("Top worlds")
-        $("#top-button").addClass("is-primary");
-        $("#latest-button").on("click",function(){
-          doNav($(".search").val(),0)//toggle top/latest
-        });
-    }else{
         $("[data-type='resulttitle']").text("Latest worlds")
         $("#latest-button").addClass("is-primary");
         $("#top-button").on("click",function(){
-          doNav($(".search").val(),1)//toggle top/latest
+          doNav($(".search").val(),"downloads",range)//toggle top/latest
+        });
+    }else{
+        $("[data-type='resulttitle']").text("Top worlds")
+        $("#top-button").addClass("is-primary");
+        $("#latest-button").on("click",function(){
+          doNav($(".search").val(),"date",range)//toggle top/latest
         });
     }
 
@@ -244,27 +251,26 @@ $().ready(function(){
     $(".search").on("keyup",function(event) {
       if (event.keyCode === 13) {
         event.preventDefault();
-        doNav($(".search").val(),top)
+        doNav($(".search").val(),sortBy,range)
       }
     });
 
     //handle navigation
-    function doNav(search,sortBy)
+    function doNav(search,sortBy,range)
     {
       let newPath = document.location.origin+document.location.pathname
       let filter = search.trim();
-      
-      if(sortBy && sortBy!=0)
-        sortBy=1;
-      else
-        sortBy=0;
 
       //todo? don't include top=0 since it is default
-      newPath+='?top='+sortBy  
+      //if(sortBy!='date')
+        newPath+='?sortBy='+sortBy  
+      if(range!='all')//dont include if default (all). 
+        newPath+='?range='+range  
+
       if(filter.length)
         newPath+='&q='+filter  
         
-      console.log("newPath");
+      //console.log("newPath");
       window.location=(newPath)
     }
     
@@ -315,6 +321,8 @@ $().ready(function(){
     let curFirst=0;
     let curCount=6*6;//six rows of six each
     let curSearch=search;
+    let curSort=sortBy;
+    let curRange=range;
 
     var fetchingPage=false;
     function getWorldsPage()
@@ -324,7 +332,7 @@ $().ready(function(){
       fetchingPage=true;
 
       //todo change to post search api
-      let urlArgs= "?first="+curFirst+"&count="+curCount+"&sortBy="+top
+      let urlArgs= "?first="+curFirst+"&count="+curCount+"&sortBy="+curSort+"&range="+curRange;
       baseUrl = "https://koduworlds.azurewebsites.net/search/"+curSearch
       let url=baseUrl+urlArgs
       curFirst+=curCount;
