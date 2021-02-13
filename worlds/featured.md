@@ -62,8 +62,8 @@ var initFeatured=(function(){
 
 function getFeatured()
 {
-  let baseUrl = "https://koduworlds.azurewebsites.net/top"
-  let urlArgs= "?first="+parseInt(Math.random()*100)+"&count=7"
+  let baseUrl = "https://koduworlds.azurewebsites.net/search"
+  let urlArgs= "?first="+parseInt(Math.random()*100)+"&count=7&sortBy=downloads"
   url=baseUrl+urlArgs
   
   $.post( url, function( data ) {
