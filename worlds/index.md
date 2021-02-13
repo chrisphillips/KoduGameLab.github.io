@@ -183,10 +183,17 @@ $().ready(function(){
 
     let sortBy=params["sortBy"]
     if(!sortBy)
-      sortBy='date';
+      sortBy='date';   
+
     let range=params["range"]
     if(!range)
       range='all';
+  
+    if(sortBy=='date')//if sorting by date
+    {
+      range='all';//then range is always all
+      $("#range").parent().hide();//range drop down isnt needed.
+    }
 
     //setup page for top or latest  
     if(sortBy=='date')
