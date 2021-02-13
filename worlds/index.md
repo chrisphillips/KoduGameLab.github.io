@@ -51,7 +51,7 @@ show_sidebar: false
                           <p data-type='resulttitle' style='float: left;' class="title is-3">Latest Worlds
                           </p>
                           <div class="navbar-item has-dropdown is-hoverable" style="float:right">
-                            <div class="navbar-link">
+                            <div id='range' class="navbar-link">
                               All
                             </div>
                             <div id="rangeDropdown" class="navbar-dropdown ">
@@ -204,6 +204,7 @@ $().ready(function(){
       });
     }
 
+    $("#range").html(range)
     $("#rangeDropdown a").on("click",function(e){
       //console.log(e.target.html())
       doNav($(".search").val(),sortBy,e.target.innerHTML.trim().toLocaleLowerCase())
@@ -290,7 +291,7 @@ $().ready(function(){
       //if(sortBy!='date')
         newPath+='?sortBy='+sortBy  
       if(range!='all')//dont include if default (all). 
-        newPath+='?range='+range  
+        newPath+='&range='+range  
 
       if(filter.length)
         newPath+='&q='+filter  
