@@ -183,11 +183,11 @@ $().ready(function(){
 
     let sortBy=params["sortBy"]
     if(!sortBy)
-      sortBy='date';   
+      sortBy='date';  //by default 
 
     let range=params["range"]
     if(!range)
-      range='all';
+      range='all';//by default
   
     if(sortBy=='date')//if sorting by date
     {
@@ -211,7 +211,11 @@ $().ready(function(){
       });
     }
 
-    $("#range").html(range)
+    //Set range drop down label
+    let capitalized=range.charAt(0).toUpperCase()+range.slice(1);
+    $("#range").html(capitalized);
+
+    //Handle range drop down click navigation
     $("#rangeDropdown a").on("click",function(e){
       //console.log(e.target.html())
       doNav($(".search").val(),sortBy,e.target.innerHTML.trim().toLocaleLowerCase())
