@@ -309,47 +309,48 @@ $().ready(function(){
       window.location=(newPath)
     }
     
+    //todo. move to util file
     function createDotKoduFilename(levelTitle, levelCreator)
+    {
+        // Clean up the title and creator if needed
+        levelTitle = levelTitle.trim();
+        if (levelTitle=="")
+            levelTitle = "Level";
+        else if (levelTitle.length > 32)
         {
-            // Clean up the title and creator if needed
+            levelTitle = levelTitle.substring(0, 32);
             levelTitle = levelTitle.trim();
-            if (levelTitle=="")
-                levelTitle = "Level";
-            else if (levelTitle.length > 32)
-            {
-                levelTitle = levelTitle.substring(0, 32);
-                levelTitle = levelTitle.trim();
-            }
-
-            levelCreator = levelCreator.trim();
-            if (levelCreator=="")
-                levelCreator = "Unknown";
-            else if (levelCreator.length > 32)
-            {
-                levelCreator = levelCreator.substring(0, 32);
-                levelCreator = levelCreator.trim();
-            }
-
-            // Get rid of invalid characters
-            let illegalRe = /[\/\?<>\\:\*\|":]/g;
-            let controlRe = /[\x00-\x1f\x80-\x9f]/g;
-            let reservedRe = /^\.+$/;
-            let windowsReservedRe = /^(con|prn|aux|nul|com[0-9]|lpt[0-9])(\..*)?$/i;
-
-            function sanitize(input, replacement) {
-              let sanitized = input
-                .replace(illegalRe, replacement)
-                .replace(controlRe, replacement)
-                .replace(reservedRe, replacement)
-                .replace(windowsReservedRe, replacement);
-              return sanitized;
-            }
-            let newName = levelTitle+", by "+levelCreator;
-            newName=sanitize(newName,"-");//+".kodu";//todo is this the right way to handle
-            // Get rid of invalid characters
-            return(encodeURIComponent(newName))
-
         }
+
+        levelCreator = levelCreator.trim();
+        if (levelCreator=="")
+            levelCreator = "Unknown";
+        else if (levelCreator.length > 32)
+        {
+            levelCreator = levelCreator.substring(0, 32);
+            levelCreator = levelCreator.trim();
+        }
+
+        // Get rid of invalid characters
+        let illegalRe = /[\/\?<>\\:\*\|":]/g;
+        let controlRe = /[\x00-\x1f\x80-\x9f]/g;
+        let reservedRe = /^\.+$/;
+        let windowsReservedRe = /^(con|prn|aux|nul|com[0-9]|lpt[0-9])(\..*)?$/i;
+
+        function sanitize(input, replacement) {
+          let sanitized = input
+            .replace(illegalRe, replacement)
+            .replace(controlRe, replacement)
+            .replace(reservedRe, replacement)
+            .replace(windowsReservedRe, replacement);
+          return sanitized;
+        }
+        let newName = levelTitle+", by "+levelCreator;
+        newName=sanitize(newName,"-");//+".kodu";//todo is this the right way to handle
+        // Get rid of invalid characters
+        return(encodeURIComponent(newName))
+
+    }
 
 
     //pageing for worlds results
