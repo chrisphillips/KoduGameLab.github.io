@@ -19,6 +19,23 @@
     width: 400px;
     height: 400px;
   }  
+
+  .swiper-slide .button {
+    display: none;
+  }
+  .swiper-slide .description {
+    display: none;
+  }
+  .modal .description {
+    display: unset;
+    color: green;
+  }
+  .modal .button
+  {
+    display:unset;
+    float: right;
+    margin: 10px;
+  }  
 </style>
 
 <!-- Slider main container -->
@@ -74,7 +91,7 @@ function createDotKoduFilename(levelTitle, levelCreator)
         levelTitle = levelTitle.substring(0, 32);
         levelTitle = levelTitle.trim();
     }
-  
+
     levelCreator = levelCreator.trim();
     if (levelCreator=="")
         levelCreator = "Unknown";
