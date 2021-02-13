@@ -375,9 +375,9 @@ $().ready(function(){
       console.log("getWorldsPage:" + url);
 
       $.get( url, function( data ) {
-          if(data.length==0)
+          if(data.length==0 || data.length<curCount)
           {
-            console.log("Got Zero Search Results")
+            console.log("Got Zero or < Count Search Results")
             $("#loading-message").hide();
             $(".more-button").remove();//hack to stop auto scroll. todo. better fix.
           }
