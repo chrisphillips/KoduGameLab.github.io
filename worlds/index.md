@@ -50,6 +50,25 @@ show_sidebar: false
                       <div class="column is-12">
                           <p data-type='resulttitle' style='float: left;' class="title is-3">Latest Worlds
                           </p>
+                          <div class="navbar-item has-dropdown is-hoverable" style="float:right">
+                            <div class="navbar-link">
+                              All
+                            </div>
+                            <div id="rangeDropdown" class="navbar-dropdown ">
+                              <a class="navbar-item " href="#">
+                                All
+                              </a>
+                              <a class="navbar-item " href="#">
+                                Year
+                              </a>
+                              <a class="navbar-item " href="#">
+                                Month
+                              </a>
+                              <a class="navbar-item " href="#">
+                                Week
+                              </a>
+                            </div>
+                          </div>
                           <button id="top-button" class='button sort-button'>Top</button>
                           <button id="latest-button" class='button sort-button'>Latest</button>
                           <input class="input search" type="text" placeholder="Search" style="float:right;width:200px;margin:3px;">
@@ -172,18 +191,24 @@ $().ready(function(){
     //setup page for top or latest  
     if(sortBy=='date')
     {
-        $("[data-type='resulttitle']").text("Latest worlds")
-        $("#latest-button").addClass("is-primary");
-        $("#top-button").on("click",function(){
-          doNav($(".search").val(),"downloads",range)//toggle top/latest
-        });
+      $("[data-type='resulttitle']").text("Latest worlds")
+      $("#latest-button").addClass("is-primary");
+      $("#top-button").on("click",function(){
+        doNav($(".search").val(),"downloads",range)//toggle top/latest
+      });
     }else{
-        $("[data-type='resulttitle']").text("Top worlds")
-        $("#top-button").addClass("is-primary");
-        $("#latest-button").on("click",function(){
-          doNav($(".search").val(),"date",range)//toggle top/latest
-        });
+      $("[data-type='resulttitle']").text("Top worlds")
+      $("#top-button").addClass("is-primary");
+      $("#latest-button").on("click",function(){
+        doNav($(".search").val(),"date",range)//toggle top/latest
+      });
     }
+
+    $("#rangeDropdown a").on("click",function(e){
+      //console.log(e.target.html())
+      doNav($(".search").val(),sortBy,e.target.innerHTML.trim().toLocaleLowerCase())
+    });
+
 
     //if a world id was specified fetch that world meta and display in modal
     if(window.location.hash){
