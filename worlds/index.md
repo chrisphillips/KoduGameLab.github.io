@@ -122,7 +122,6 @@ function hexToBase64(str) {
     str.replace(/\r|\n/g, "").replace(/([\da-fA-F]{2}) ?/g, "0x$1 ").replace(/ +$/, "").split(" "))
   );
 }
-
 function base64ToHex(str) {
   for (var i = 0, bin = atob(str.replace(/[ \r\n]+$/, "")), hex = []; i < bin.length; ++i) {
     var tmp = bin.charCodeAt(i).toString(16);
@@ -147,9 +146,11 @@ function decodeGuid(encodedGuid)
       return (decoded)
 }
 //TODO. Page caching may not be working right!!
+//Todo. MrPresident levels all white.
+//todo. sudden 502 on thumbs. 
+//todo. fix short encoding on world page
   
 $().ready(function(){
-    //console.log("here");
     $(".world-item").hide();//hide template at start.
     jQuery.timeago.settings.strings.minute = "1 minute";//remove "about" (ug)
     jQuery.timeago.settings.strings.hour = "1 hour";
@@ -215,7 +216,6 @@ $().ready(function(){
 
     //Handle range drop down click navigation
     $("#rangeDropdown a").on("click",function(e){
-      //console.log(e.target.html())
       doNav($(".search").val(),sortBy,e.target.innerHTML.trim().toLocaleLowerCase())
     });
 
@@ -224,7 +224,8 @@ $().ready(function(){
     if(window.location.hash){
       let guid = window.location.hash.slice(1)//slice removes # at start.
 
-      //handle base64 guids
+      //handle base64 guids.
+      //todo. Fix. Not working
       if(guid.length==24 && guid[22]=='=' && guid[23]=='=') //base64 guid?
       {
         guid=decodeGuid(guid)
@@ -234,10 +235,11 @@ $().ready(function(){
         let dataUrl = "https://koduworlds.azurewebsites.net/world/"+guid
         //todo validate guid.
         $.get( dataUrl, function( world ) {
-            //todo handle error 
+            //todo handle error. Fill in modal with World Not Found? 
             //console.log("Got Zero Search Results")
             if(world)
             {
+              //todo. unify this code with pageload version
               //copy first item (template)
               let item=$(".world-item").first().clone();
               //and fill it in with world data
@@ -251,24 +253,21 @@ $().ready(function(){
               item.find("[data-type='thumbnail']").attr("src","https://koduworlds.azurewebsites.net/thumbnail/"+world.WorldId)
               item.find("[data-type='download-link']").attr("href","https://koduworlds.azurewebsites.net/download/"+world.WorldId+"?fn="+
                 createDotKoduFilename(world.Name,world.Creator))
-              item.show();//defaults to hidden so show.
+              item.show();//template defaults to hidden so show.
 
               //item.find("[data-type='download-link']").attr("download",   createDotKoduFilename(world.Name,world.Creator))
 
               item.on("click",function(e){
-                  console.log(e.currentTarget)
-                  //$(".world-item").removeClass("zoom")
+                  //console.log(e.currentTarget)
                   $(".modal").addClass("is-active")
                   $(".modal-card").html($(e.currentTarget).html())
               })
 
-              //todo. maybe hide.
+              //todo. maybe hide this item.
               $(".world-container").append(item );
 
               //Immediately pop up in a modal
               item.click();
-              //$(".modal").addClass("is-active")
-              //$(".modal-card").html($(e.currentTarget).html())
             }
 
         });
@@ -290,23 +289,22 @@ $().ready(function(){
       }
     });
 
-    //handle navigation
+    //handle navigation including building url
     function doNav(search,sortBy,range)
     {
       let newPath = document.location.origin+document.location.pathname
       let filter = search.trim();
-
-      //todo? don't include top=0 since it is default
-      //if(sortBy!='date')
+     
+      //if(sortBy!='date') //todo? don't include if date since it is default
         newPath+='?sortBy='+sortBy  
       if(range!='all')//dont include if default (all). 
         newPath+='&range='+range  
 
-      if(filter.length)
+      if(filter.length)//add search string
         newPath+='&q='+filter  
         
-      //console.log("newPath");
-      window.location=(newPath)
+      //console.log(newPath);
+      window.location=newPath
     }
     
     //todo. move to util file
@@ -352,7 +350,6 @@ $().ready(function(){
 
     }
 
-
     //pageing for worlds results
     let curFirst=0;
     let curCount=6*6;//six rows of six each
@@ -373,12 +370,12 @@ $().ready(function(){
       let url=baseUrl+urlArgs
       curFirst+=curCount;
 
-      console.log("getWorldsPage:" + url);
+      //console.log("getWorldsPage:" + url);
 
       $.get( url, function( data ) {
           if(data.length==0 || data.length<curCount)
           {
-            console.log("Got Zero or < Count Search Results")
+            //console.log("Got Zero or < Count Search Results")
             $("#loading-message").hide();
             $(".more-button").remove();//hack to stop auto scroll. todo. better fix.
           }
@@ -402,8 +399,7 @@ $().ready(function(){
               item.show();//defaults to hidden so show.
 
               item.on("click",function(e){
-                  console.log(e.currentTarget)
-                  //$(".world-item").removeClass("zoom")
+                  //console.log(e.currentTarget)
                   $(".modal").addClass("is-active")
                   $(".modal-card").html($(e.currentTarget).html())
               })

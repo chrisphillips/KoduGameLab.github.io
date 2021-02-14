@@ -153,6 +153,7 @@ function getFeatured()
           $(".swiper-wrapper").append(item );
       }
       
+      //todo. fix next prev buttons.
       var swiper = new Swiper('.swiper-container', {
         effect: 'coverflow',
         grabCursor: true,
