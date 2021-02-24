@@ -134,17 +134,41 @@ function base64ToHex(str) {
 function decodeGuid(encodedGuid)
 {
       //"dTZs7fWnRkygPa6j0RjR0g=="
+
+      // 75366ced-f5a7-464c-a03d-aea3d118d1d2
+      // 75366ced-f5a7-464c-a03d-aea3d118d1d2
+
+      // 38DB4312-DEDF-4EC1-84DC-2B31974A5926
+
+      // 49bc134b-8620-2a46-974b-b2e6286ebb4d
+
+      // 4B13BC49-2086-462A-974B-B2E6286EBB4D
+      // 4b13bc49-2086-462a-974b-b2e6286ebb4d
+
+      //ns[0]=os[]
+
       var decoded = base64ToHex(encodedGuid);
 
       var chunks = [];
-      chunks.push( decoded.substring(0, 8) );
-      chunks.push( decoded.substring(8, 12) );
-      chunks.push( decoded.substring(12, 16) );
+      chunks.push( decoded.substring(6, 8)+
+                  decoded.substring(4, 6)+
+                  decoded.substring(2, 4)+
+                  decoded.substring(0, 2) 
+        );
+      chunks.push( 
+        decoded.substring(10, 12) +
+        decoded.substring(8, 10) 
+        );
+      chunks.push( 
+        decoded.substring(14, 16)+ 
+        decoded.substring(12, 14) 
+      );
       chunks.push( decoded.substring(16, 20) );
       chunks.push( decoded.substring(20) );
       decoded = chunks.join("-");
       return (decoded)
 }
+//decodeGuid("SbwTS4YgKkaXS7LmKG67TQ==")
 //TODO. Page caching may not be working right!!
 //Todo. MrPresident levels all white.
 //todo. sudden 502 on thumbs. 
