@@ -168,7 +168,7 @@ function decodeGuid(encodedGuid)
       decoded = chunks.join("-");
       return (decoded)
 }
-//decodeGuid("SbwTS4YgKkaXS7LmKG67TQ==")
+decodeGuid("SbwTS4YgKkaXS7LmKG67TQ==")
 //TODO. Page caching may not be working right!!
 //Todo. MrPresident levels all white.
 //todo. sudden 502 on thumbs. 
@@ -189,7 +189,9 @@ $().ready(function(){
     );
 
     //q in url is search query (if any)
-    let search = decodeURIComponent(params["q"])
+    let search = params["q"]
+    if(search)
+      search=decodeURIComponent(search)
     if(search && search.trim().length>0)
     {
         //update section title and search bar
