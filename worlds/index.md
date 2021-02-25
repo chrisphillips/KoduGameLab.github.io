@@ -47,7 +47,11 @@ show_sidebar: false
     z-index: 2; 
     /* overflow: visible; */
     font-size: x-large;
-}  
+}
+.modal .card{
+    overflow: visible; 
+}
+
 </style>
 
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
@@ -448,7 +452,14 @@ $().ready(function(){
               item.on("click",function(e){
                   //console.log(e.currentTarget)
                   $(".modal").addClass("is-active")
+                  let closeButton = $(".modal .close").first().clone()
                   $(".modal-card").html($(e.currentTarget).html())
+                  $(".modal-card").append(closeButton);
+                  //handle close modal on background click
+                  $(".modal .close").on("click", function(){
+                      $(".modal-background").click()//close by simulating background click
+                  })
+                  
               })
 
               $(".world-container").append(item );
