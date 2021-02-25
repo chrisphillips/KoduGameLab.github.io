@@ -166,6 +166,10 @@ function getFeatured()
           modifier: 1,
           slideShadows: false,
         },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },        
         keyboard: {
           enabled: true,
         },        
