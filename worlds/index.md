@@ -16,7 +16,6 @@ show_sidebar: false
 .world-item .downloads {
   color: blue;
   float: right;
-  box-shadow: 2px 0em 1em 0em rgb(10 10 10 / 43%), 0 0px 0 1px rgb(10 10 10 / 2%);
 }  
 .modal.world-item .description {
   display: unset;
@@ -27,6 +26,8 @@ show_sidebar: false
   display:unset;
   float: right;
   margin: 10px;
+  box-shadow: 2px 0em 1em 0em rgb(10 10 10 / 43%), 0 0px 0 1px rgb(10 10 10 / 2%);
+
 }
 .sort-button
 {
@@ -300,7 +301,13 @@ $().ready(function(){
               item.on("click",function(e){
                   //console.log(e.currentTarget)
                   $(".modal").addClass("is-active")
+                  let closeButton = $(".modal .close").first().clone()
                   $(".modal-card").html($(e.currentTarget).html())
+                  $(".modal-card").append(closeButton);
+                  //handle close modal on background click
+                  $(".modal .close").on("click", function(){
+                      $(".modal-background").click()//close by simulating background click
+                  })
               })
 
               //todo. maybe hide this item.
