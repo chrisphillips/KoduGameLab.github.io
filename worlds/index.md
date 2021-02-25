@@ -48,7 +48,7 @@ show_sidebar: false
     /* overflow: visible; */
     font-size: x-large;
 }
-.modal .card{
+.modal-card{
     overflow: visible; 
 }
 
@@ -126,7 +126,6 @@ show_sidebar: false
 <div class="modal">
   <div class="modal-background"></div>
   <div class="modal-card">
-  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
   </button>
   </div>
 
@@ -305,8 +304,9 @@ $().ready(function(){
               item.on("click",function(e){
                   //console.log(e.currentTarget)
                   $(".modal").addClass("is-active")
-                  let closeButton = $(".modal .close").first().clone()
                   $(".modal-card").html($(e.currentTarget).html())
+
+                  let closeButton = $('<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>')
                   $(".modal-card").append(closeButton);
                   //handle close modal on background click
                   $(".modal .close").on("click", function(){
@@ -452,13 +452,15 @@ $().ready(function(){
               item.on("click",function(e){
                   //console.log(e.currentTarget)
                   $(".modal").addClass("is-active")
-                  let closeButton = $(".modal .close").first().clone()
                   $(".modal-card").html($(e.currentTarget).html())
+
+                  let closeButton = $('<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>')
                   $(".modal-card").append(closeButton);
                   //handle close modal on background click
                   $(".modal .close").on("click", function(){
                       $(".modal-background").click()//close by simulating background click
                   })
+
                   
               })
 

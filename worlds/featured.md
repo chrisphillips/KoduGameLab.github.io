@@ -148,6 +148,14 @@ function getFeatured()
               //$(".world-item").removeClass("zoom")
               $(".modal").addClass("is-active")
               $(".modal-card").html($(e.currentTarget).html())
+
+              let closeButton = $('<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>')
+              $(".modal-card").append(closeButton);
+              //handle close modal on background click
+              $(".modal .close").on("click", function(){
+                  $(".modal-background").click()//close by simulating background click
+              })
+
           })
 
           $(".swiper-wrapper").append(item );
