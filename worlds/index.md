@@ -47,6 +47,7 @@ show_sidebar: false
     z-index: 2; 
     /* overflow: visible; */
     font-size: x-large;
+    cursor:pointer;
 }
 .modal-card{
     overflow: visible; 
