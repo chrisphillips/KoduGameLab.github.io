@@ -16,6 +16,7 @@ show_sidebar: false
 .world-item .downloads {
   color: blue;
   float: right;
+  box-shadow: 2px 0em 1em 0em rgb(10 10 10 / 43%), 0 0px 0 1px rgb(10 10 10 / 2%);
 }  
 .modal.world-item .description {
   display: unset;
@@ -34,6 +35,17 @@ show_sidebar: false
 }
 .modal-open {
     overflow: initial;
+}
+.modal .close{
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+    position: absolute;
+    right: -15px;
+    top: -15px;
+    z-index: 2; 
+    /* overflow: visible; */
+    font-size: x-large;
 }  
 </style>
 
@@ -109,6 +121,8 @@ show_sidebar: false
 <div class="modal">
   <div class="modal-background"></div>
   <div class="modal-card">
+  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+  </button>
   </div>
 
 </div>
