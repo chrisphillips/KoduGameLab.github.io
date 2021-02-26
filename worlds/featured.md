@@ -12,6 +12,7 @@
     width: 100%;
     padding-top: 50px;
     padding-bottom: 50px;
+    box-shadow: rgb(0 0 0 / 58%) 0px 0.5em 1em -0.125em, rgb(10 10 10 / 2%) 0px 0px 0px 1px;
   }
   .swiper-slide {
     background-position: center;
