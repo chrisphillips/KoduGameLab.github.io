@@ -26,8 +26,10 @@ show_sidebar: false
   display:unset;
   float: right;
   margin: 10px;
-  box-shadow: 2px 0em 1em 0em rgb(10 10 10 / 43%), 0 0px 0 1px rgb(10 10 10 / 2%);
-
+}
+.button
+{
+  box-shadow: 0 0.5em 1em -0.125em rgb(10 10 10 / 33%), 0 0px 0 1px rgb(10 10 10 / 2%)
 }
 .card{
   box-shadow: 0 0.5em 1em -0.125em rgb(10 10 10 / 33%), 0 0px 0 1px rgb(10 10 10 / 2%)
