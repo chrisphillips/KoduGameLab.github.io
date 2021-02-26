@@ -29,6 +29,9 @@ show_sidebar: false
   box-shadow: 2px 0em 1em 0em rgb(10 10 10 / 43%), 0 0px 0 1px rgb(10 10 10 / 2%);
 
 }
+.card{
+  box-shadow: 0 0.5em 1em -0.125em rgb(10 10 10 / 33%), 0 0px 0 1px rgb(10 10 10 / 2%)
+}
 .sort-button
 {
   float: right;
@@ -46,8 +49,10 @@ show_sidebar: false
     top: -15px;
     z-index: 2; 
     /* overflow: visible; */
-    font-size: x-large;
+    font-size: xxx-large;
     cursor:pointer;
+    line-height: 10px;
+    padding-left: 5px;
 }
 .modal-card{
     overflow: visible; 
