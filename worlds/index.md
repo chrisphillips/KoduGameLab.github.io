@@ -34,6 +34,9 @@ show_sidebar: false
 .card{
   box-shadow: 0 0.5em 1em -0.125em rgb(10 10 10 / 33%), 0 0px 0 1px rgb(10 10 10 / 2%)
 }
+.navbar{
+  box-shadow: 0 0.5em 1em -0.125em rgb(10 10 10 / 33%), 0 0px 0 1px rgb(10 10 10 / 2%)
+}
 .sort-button
 {
   float: right;
