@@ -312,6 +312,10 @@ $().ready(function(){
 
               //item.find("[data-type='download-link']").attr("download",   createDotKoduFilename(world.Name,world.Creator))
 
+              let quality=params["quality"]
+              if(quality)
+                item.find("[data-type='thumbnail']").attr("src",item.find("[data-type='thumbnail']").attr("src")+"?quality="+quality);
+
               item.on("click",function(e){
                   //console.log(e.currentTarget)
                   $(".modal").addClass("is-active")
@@ -455,6 +459,10 @@ $().ready(function(){
               item.find("[data-type='ago']").attr("datetime",world.Modified);
               item.find("[data-type='thumbnail']").attr("src","https://koduworlds.azurewebsites.net/thumbnail/"+world.WorldId)
               item.find("[data-type='download-link']").attr("href","https://koduworlds.azurewebsites.net/download/"+world.WorldId+"?fn="+createDotKoduFilename(world.Name,world.Creator))
+
+              let quality=params["quality"]
+              if(quality)
+                item.find("[data-type='thumbnail']").attr("src",item.find("[data-type='thumbnail']").attr("src")+"?quality="+quality);
 
               //item.find("[data-type='download-link']").attr("download",createDotKoduFilename(world.Name,world.Creator))
 
