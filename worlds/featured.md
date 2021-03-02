@@ -104,8 +104,17 @@
 $(".swiper-container").hide();//hide template at start.
 $(".swiper-slide").hide();//hide template at start.
 
+
+
 //$().ready(function(){
 var initFeatured=(function(){
+
+  //handle close modal on background click
+  $(".modal-background").on("click",function(e){
+    $(".is-active").removeClass("is-active")
+    //remove anchor (#) from url
+    history.pushState({}, "", document.location.href.split('#')[0]);
+  })
 
 //todo. move to util file
 function createDotKoduFilename(levelTitle, levelCreator)
