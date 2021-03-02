@@ -27,16 +27,36 @@
   .swiper-slide .description {
     display: none;
   }
-  .modal .description {
-    display: unset;
-    color: green;
-  }
-  .modal .button
-  {
-    display:unset;
-    float: right;
-    margin: 10px;
-  }  
+.modal.world-item .description {
+  display: unset;
+  color: green;
+}
+.modal .button
+{
+  display:unset;
+  float: right;
+  margin: 10px;
+}
+.modal-open {
+    overflow: initial;
+}
+.modal .close{
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+    position: absolute;
+    right: -15px;
+    top: -15px;
+    z-index: 2; 
+    /* overflow: visible; */
+    font-size: xxx-large;
+    cursor:pointer;
+    line-height: 10px;
+    padding-left: 5px;
+}
+.modal-card{
+    overflow: visible; 
+}  
 </style>
 
 <!-- Slider main container -->
@@ -71,6 +91,13 @@
   <!-- Add Arrows -->
   <div class="swiper-button-next"></div>
   <div class="swiper-button-prev"></div>
+</div>
+<div class="modal">
+  <div class="modal-background"></div>
+  <div class="modal-card">
+  </button>
+  </div>
+
 </div>
 
 <script>

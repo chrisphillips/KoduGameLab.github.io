@@ -68,7 +68,7 @@ show_sidebar: false
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-timeago/1.6.7/jquery.timeago.min.js" crossorigin="anonymous"></script>
 
-{% include_relative featured.md %}
+<!-- {% include_relative featured.md %} -->
 
 <section class="section">
     <div class="container">
@@ -232,8 +232,8 @@ $().ready(function(){
     }
 
     //Show featured if not doing any sort of query
-    if(window.location.search=="")
-      initFeatured();
+    // if(window.location.search=="")
+    //   initFeatured();
     
     let sortBy=params["sortBy"]
     if(!sortBy)
