@@ -68,8 +68,6 @@ show_sidebar: false
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-timeago/1.6.7/jquery.timeago.min.js" crossorigin="anonymous"></script>
 
-<!-- {% include_relative featured.md %} -->
-
 <section class="section">
     <div class="container">
         <div class="columns">
@@ -296,6 +294,11 @@ $().ready(function(){
             {
               //todo. unify this code with pageload version
               //copy first item (template)
+
+              let thumbUrl = world.ThumbnailUrl
+              if(!thumbUrl || thumbUrl==null)
+                thumbUrl="https://koduworlds.azurewebsites.net/thumbnail/"+world.WorldId
+
               let item=$(".world-item").first().clone();
               //and fill it in with world data
               item.find("[data-type='worldref']").attr("href","#"+world.WorldId);
@@ -305,7 +308,7 @@ $().ready(function(){
               item.find("[data-type='downloads']").text(world.Downloads+"⇩" ); /* &#8681 */
               item.find("[data-type='ago']").text(world.Modified);
               item.find("[data-type='ago']").attr("datetime",world.Modified);
-              item.find("[data-type='thumbnail']").attr("src","https://koduworlds.azurewebsites.net/thumbnail/"+world.WorldId)
+              item.find("[data-type='thumbnail']").attr("src",thumbUrl)
               item.find("[data-type='download-link']").attr("href","https://koduworlds.azurewebsites.net/download/"+world.WorldId+"?fn="+
                 createDotKoduFilename(world.Name,world.Creator))
               item.show();//template defaults to hidden so show.
@@ -449,6 +452,11 @@ $().ready(function(){
           {
               //copy first item (template)
               let item=$(".world-item").first().clone();
+
+              let thumbUrl = world.ThumbnailUrl
+              if(!thumbUrl || thumbUrl==null)
+                thumbUrl="https://koduworlds.azurewebsites.net/thumbnail/"+world.WorldId
+
               //and fill it in with world data
               item.find("[data-type='worldref']").attr("href","#"+world.WorldId);
               item.find("[data-type='worldname']").text(world.Name);
@@ -457,7 +465,7 @@ $().ready(function(){
               item.find("[data-type='downloads']").text(world.Downloads+"⇩" ); /* &#8681 */
               item.find("[data-type='ago']").text(world.Modified);
               item.find("[data-type='ago']").attr("datetime",world.Modified);
-              item.find("[data-type='thumbnail']").attr("src","https://koduworlds.azurewebsites.net/thumbnail/"+world.WorldId)
+              item.find("[data-type='thumbnail']").attr("src",thumbUrl)
               item.find("[data-type='download-link']").attr("href","https://koduworlds.azurewebsites.net/download/"+world.WorldId+"?fn="+createDotKoduFilename(world.Name,world.Creator))
 
               let quality=params["quality"]
