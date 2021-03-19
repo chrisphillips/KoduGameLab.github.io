@@ -357,6 +357,10 @@ $().ready(function(){
         doNav($(".search").val(),sortBy,range)
       }
     });
+    //do select all when search box clicked.
+    $(".search").on("click",function(event) {
+      this.setSelectionRange(0, this.value.length)
+    });    
 
     //handle navigation including building url
     function doNav(search,sortBy,range)
@@ -462,6 +466,7 @@ $().ready(function(){
               item.find("[data-type='worldname']").text(world.Name);
               item.find("[data-type='authorname']").text("by "+world.Creator);
               item.find("[data-type='description']").text(world.Description);
+              let adjustedDownloads = (Math.pow(world.Downloads,-3)*10)
               item.find("[data-type='downloads']").text(world.Downloads+"⇩" ); /* &#8681 */
               item.find("[data-type='ago']").text(world.Modified);
               item.find("[data-type='ago']").attr("datetime",world.Modified);
