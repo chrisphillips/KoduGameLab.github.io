@@ -466,7 +466,11 @@ $().ready(function(){
               item.find("[data-type='worldname']").text(world.Name);
               item.find("[data-type='authorname']").text("by "+world.Creator);
               item.find("[data-type='description']").text(world.Description);
-              let adjustedDownloads = parseInt(Math.pow(world.Downloads,(1.0/3.0))*10)
+              let adjustedDownloads = 20+parseInt(Math.pow(world.Downloads,(1.0/3.0))*20)
+              if(world.Downloads<20)
+              {
+                adjustedDownloads=world.Downloads;
+              }
               item.find("[data-type='downloads']").text(adjustedDownloads+"⇩" ); /* &#8681 */
               item.find("[data-type='ago']").text(world.Modified);
               item.find("[data-type='ago']").attr("datetime",world.Modified);
