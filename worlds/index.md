@@ -467,7 +467,7 @@ $().ready(function(){
               item.find("[data-type='authorname']").text("by "+world.Creator);
               item.find("[data-type='description']").text(world.Description);
               let adjustedDownloads = (Math.pow(world.Downloads,-3)*10)
-              item.find("[data-type='downloads']").text(world.Downloads+"⇩" ); /* &#8681 */
+              item.find("[data-type='downloads']").text(adjustedDownloads+"⇩" ); /* &#8681 */
               item.find("[data-type='ago']").text(world.Modified);
               item.find("[data-type='ago']").attr("datetime",world.Modified);
               item.find("[data-type='thumbnail']").attr("src",thumbUrl)
