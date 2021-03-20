@@ -471,7 +471,7 @@ $().ready(function(){
               let adjustedDownloads = world.Downloads
               if(world.Downloads > 100)
               {
-                adjustedDownloads = Math.pow(world.Downloads – 100, 0.6) + 100
+                adjustedDownloads = Math.round(Math.pow(world.Downloads-100,0.6)+100)
               }
 
  
