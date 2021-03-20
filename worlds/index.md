@@ -469,7 +469,7 @@ $().ready(function(){
 
               //temp adjust downloads
               let adjustedDownloads = world.Downloads
-              If (world.Downloads > 100)
+              if(world.Downloads > 100)
               {
                 adjustedDownloads = Math.pow(world.Downloads – 100, 0.6) + 100
               }
