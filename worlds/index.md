@@ -467,12 +467,12 @@ $().ready(function(){
               item.find("[data-type='authorname']").text("by "+world.Creator);
               item.find("[data-type='description']").text(world.Description);
 
-              //temp adjust downloads
+              // //temp adjust downloads
               let adjustedDownloads = world.Downloads
-              if(world.Downloads > 100)
-              {
-                adjustedDownloads = Math.round(Math.pow(world.Downloads-100,0.6)+100)
-              }
+              // if(world.Downloads > 100)
+              // {
+              //   adjustedDownloads = Math.round(Math.pow(world.Downloads-100,0.6)+100)
+              // }
 
  
               item.find("[data-type='downloads']").text(adjustedDownloads+"⇩" ); /* &#8681 */
