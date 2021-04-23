@@ -175,7 +175,11 @@ function getFeatured()
           item.find("[data-type='worldname']").text(world.Name);
           item.find("[data-type='authorname']").text("by "+world.Creator);
           item.find("[data-type='description']").text(world.Description);
-          item.find("[data-type='download-link']").attr("href","https://koduworlds.azurewebsites.net/download/"+world.WorldId+"?fn="+createDotKoduFilename(world.Name,world.Creator))
+          if(world.DataUrl && world.DataUrl!=null)
+            item.find("[data-type='download-link']").attr("href",world.DataUrl)
+          else
+            item.find("[data-type='download-link']").attr("href","https://koduworlds.azurewebsites.net/download2/"+world.WorldId+"?fn="+
+              createDotKoduFilename(world.Name,world.Creator))
 
           item.find("[data-type='thumbnail']").attr("src","https://koduworlds.azurewebsites.net/thumbnail/"+world.WorldId)
           item.show();//defaults to hidden so show.
