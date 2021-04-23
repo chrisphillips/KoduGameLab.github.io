@@ -309,8 +309,12 @@ $().ready(function(){
               item.find("[data-type='ago']").text(world.Modified);
               item.find("[data-type='ago']").attr("datetime",world.Modified);
               item.find("[data-type='thumbnail']").attr("src",thumbUrl)
-              item.find("[data-type='download-link']").attr("href","https://koduworlds.azurewebsites.net/download/"+world.WorldId+"?fn="+
-                createDotKoduFilename(world.Name,world.Creator))
+
+              if(world.DataUrl && world.DataUrl!=null)
+                item.find("[data-type='download-link']").attr("href",world.DataUrl)
+              else
+                item.find("[data-type='download-link']").attr("href","https://koduworlds.azurewebsites.net/download2/"+world.WorldId+"?fn="+
+                  createDotKoduFilename(world.Name,world.Creator))
               item.show();//template defaults to hidden so show.
 
               //item.find("[data-type='download-link']").attr("download",   createDotKoduFilename(world.Name,world.Creator))
